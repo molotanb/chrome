@@ -4,74 +4,798 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="src/css/style.min.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header">
-            <div class="header__wrapper">
-                <div class="header__hamburger">
-                    <div class="header__hamburger-wrapper" id="js-hamburger-button">
-                        <button type="button" class="header__hamburger-button" aria-controls="js-header__drawer" aria-expanded="false" tabindex="0" role="button" aria-label="Откройте панель навигации">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M33 11L6 11M33 20.5H6M33 30H6" stroke="#202125" stroke-width="2.5" stroke-linecap="round"/>
+    <div class="header">
+        <div class="header__wrapper">
+            <div class="header__hamburger">
+                <div class="header__hamburger-wrapper" id="js-hamburger-button">
+                    <button type="button" class="header__hamburger-button" aria-controls="js-header__drawer"
+                        aria-expanded="false" tabindex="0" role="button" aria-label="Откройте панель навигации">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M33 11L6 11M33 20.5H6M33 30H6" stroke="#202125" stroke-width="2.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="header__lockup">
+                <div class="header__logo">
+                    <svg viewBox="0 0 116 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_4011_587)">
+                            <path
+                                d="M15.5676 23.4C12.7237 23.4 10.2366 21.8718 8.87846 19.5899L2.08543 7.80002L2.08419 7.79813L2.08294 7.80002C0.758453 10.0945 0 12.7583 0 15.6C0 24.2155 6.96991 31.2 15.5676 31.2L22.2567 19.5899C20.8986 21.8718 18.4115 23.4 15.5676 23.4Z"
+                                fill="url(#paint0_linear_4011_587)" />
+                            <path
+                                d="M29.0528 7.80024H15.5681C19.8673 7.80024 23.3519 11.2922 23.3519 15.6003C23.3519 16.9806 22.9939 18.2766 22.3662 19.4017C22.3307 19.4653 22.294 19.5275 22.2567 19.5899L15.5676 31.2C24.1652 31.2 31.1357 24.2158 31.1357 15.6003C31.1357 12.7586 30.3773 10.0947 29.0528 7.80024Z"
+                                fill="url(#paint1_linear_4011_587)" />
+                            <path
+                                d="M29.0501 7.80002C26.3576 3.13809 21.3293 0 15.568 0C9.80673 0 4.77676 3.13622 2.08419 7.79813L5.0618 13.0431L8.76993 19.4014C8.14226 18.2763 7.78418 16.9803 7.78418 15.6C7.78418 11.2919 11.269 7.80024 15.5681 7.80024L29.0501 7.80002Z"
+                                fill="url(#paint2_linear_4011_587)" />
+                            <path
+                                d="M23.3509 15.6003C23.3509 11.2922 19.8663 7.80024 15.5671 7.80024C11.268 7.80024 7.78338 11.2922 7.78338 15.6003C7.78338 16.9806 8.14139 18.2766 8.76913 19.4017L8.87846 19.5899C10.2366 21.8718 12.7237 23.4 15.5676 23.4C18.4115 23.4 20.8986 21.8718 22.2567 19.5899L22.3652 19.4017C22.9929 18.2766 23.3509 16.9806 23.3509 15.6003Z"
+                                fill="white" />
+                            <path
+                                d="M21.9498 15.6002C21.9498 12.0677 19.0922 9.20418 15.5671 9.20418C12.0419 9.20418 9.18441 12.0677 9.18441 15.6002C9.18441 16.7322 9.47829 17.7948 9.99264 18.7171L10.0817 18.8718C11.1958 20.7426 13.2351 21.9962 15.5671 21.9962C17.8991 21.9962 19.9385 20.7426 21.0525 18.8718L21.1415 18.7171C21.6559 17.7948 21.9498 16.7322 21.9498 15.6002Z"
+                                fill="#1A73E8" />
+                            <path
+                                d="M43.3218 22.0391C42.8354 22.0391 42.3609 21.9292 41.9231 21.7221C41.4854 21.5149 41.0962 21.2223 40.7799 20.8566C40.0743 20.0279 39.6851 18.9552 39.6851 17.8583C39.6851 16.7613 40.0743 15.7011 40.7799 14.86C41.0962 14.4943 41.4854 14.2017 41.9231 13.9945C42.3609 13.7873 42.8354 13.6775 43.3218 13.6775C44.0272 13.6407 44.7203 13.8359 45.3044 14.2259C45.8885 14.616 46.3263 15.1888 46.5573 15.859L48.5518 15.0303C48.1626 14.0799 47.5057 13.2507 46.6787 12.6416C45.7303 11.9833 44.5989 11.642 43.4556 11.6913C42.6529 11.6669 41.8621 11.813 41.1204 12.1181C40.3788 12.4227 39.7094 12.8856 39.162 13.4584C38.6029 14.0431 38.1769 14.7382 37.8849 15.494C37.5929 16.2496 37.459 17.0664 37.4833 17.8708C37.459 18.6876 37.5929 19.4919 37.8849 20.2476C38.1645 21.0032 38.6023 21.6978 39.162 22.2831C39.7212 22.8677 40.3782 23.3189 41.1204 23.6234C41.8621 23.9279 42.6529 24.0745 43.4556 24.0503C44.6107 24.0871 45.754 23.7457 46.7148 23.063C47.5661 22.4659 48.223 21.6372 48.6241 20.6862L46.6905 19.8575C46.0703 21.3077 44.9519 22.0391 43.3218 22.0391Z"
+                                fill="#5F6368" />
+                            <path
+                                d="M56.2765 11.6791C55.5105 11.6791 54.7571 11.8863 54.1007 12.2644C53.4929 12.5814 52.9706 13.0687 52.618 13.6665H52.5209L52.618 12.0572V6.73952H50.4386V23.6499H52.618V17.2396C52.6056 16.3254 52.9095 15.4481 53.4687 14.7411C53.724 14.3997 54.0515 14.1196 54.4407 13.9367C54.8293 13.742 55.2546 13.6565 55.6799 13.6684C57.5873 13.6684 58.5343 14.7411 58.5343 16.8857V23.6499H60.7138V16.555C60.7138 15.068 60.3246 13.8856 59.5711 13.0076C58.8046 12.1178 57.7111 11.6791 56.2765 11.6791Z"
+                                fill="#5F6368" />
+                            <path
+                                d="M68.881 11.7846C68.1748 11.8088 67.493 12.0279 66.8964 12.4179C66.2631 12.7592 65.7886 13.3071 65.5327 13.9773H65.4461V12.1053H63.3289V23.6493H65.5084L65.5327 17.3025C65.5084 16.852 65.5813 16.4133 65.7394 15.9871C65.8976 15.561 66.1411 15.1835 66.4456 14.8546C66.7133 14.5619 67.0303 14.3311 67.3952 14.1725C67.7483 14.0141 68.1499 13.9292 68.5398 13.9292C68.9295 13.9167 69.3187 13.9779 69.6842 14.0996L70.5124 12.0653C70.0012 11.87 69.4414 11.7727 68.881 11.7846Z"
+                                fill="#5F6368" />
+                            <path
+                                d="M81.9115 15.4942C81.6316 14.7385 81.1941 14.0441 80.6344 13.4587C79.5035 12.3256 77.9589 11.6916 76.3536 11.6916C74.7483 11.6916 73.2153 12.3256 72.0723 13.4587C71.5131 14.0559 71.0746 14.7385 70.7951 15.4942C70.503 16.2499 70.3691 17.0667 70.3934 17.871C70.3691 18.6879 70.503 19.4922 70.7951 20.2478C71.0746 21.0035 71.5124 21.698 72.0723 22.2833C73.203 23.4165 74.7483 24.0505 76.3536 24.0505C77.9589 24.0505 79.4912 23.4165 80.6344 22.2833C81.1818 21.6986 81.6193 21.0035 81.9115 20.2478C82.2036 19.4922 82.3374 18.6754 82.3135 17.871C82.3374 17.0542 82.2036 16.2499 81.9115 15.4942ZM79.8925 19.5034C79.6987 20.0275 79.4066 20.5149 79.0175 20.9174C78.677 21.2831 78.2633 21.5757 77.8013 21.7704C77.3508 21.9776 76.8525 22.0749 76.3536 22.0749C75.8554 22.0749 75.3687 21.9651 74.9066 21.7704C74.4446 21.5632 74.031 21.2831 73.6904 20.9174C73.3013 20.503 73.0092 20.0275 72.8154 19.5034C72.6209 18.9792 72.5356 18.4189 72.5601 17.8579C72.5356 17.2976 72.6209 16.7366 72.8154 16.2124C73.0092 15.6883 73.3136 15.2009 73.6904 14.7985C74.031 14.4328 74.4446 14.1401 74.9066 13.9454C75.3571 13.7383 75.8554 13.641 76.3536 13.641C76.8525 13.641 77.3392 13.7507 77.8013 13.9454C78.2633 14.1526 78.677 14.4328 79.0175 14.7985C79.4066 15.2128 79.6987 15.6883 79.8925 16.2124C80.0878 16.7366 80.1724 17.2969 80.1478 17.8579C80.1731 18.4189 80.0878 18.9799 79.8925 19.5034Z"
+                                fill="#5F6368" />
+                            <path
+                                d="M97.7419 11.6638C96.9399 11.6396 96.138 11.8348 95.4214 12.2255C94.7163 12.6161 94.1212 13.2021 93.7083 13.8978C93.0517 12.4208 91.8369 11.6764 90.0385 11.6764C89.3219 11.6888 88.6285 11.896 88.0095 12.2623C87.3767 12.5799 86.8547 13.0679 86.4779 13.6657H86.368V12.0432H84.3136V23.6496H86.4931V17.2393C86.4801 16.3376 86.7729 15.4597 87.3334 14.7533C87.577 14.412 87.8938 14.1436 88.2597 13.9489C88.6248 13.7661 89.0392 13.6688 89.4535 13.6688C89.8064 13.632 90.16 13.6931 90.5006 13.8148C90.8419 13.9489 91.134 14.1436 91.39 14.3995C91.8167 14.8868 92.0358 15.7155 92.0358 16.8855V23.6496H94.153V17.2393C94.14 16.3376 94.4445 15.4597 94.9933 14.7533C95.237 14.412 95.5537 14.1436 95.9196 13.9489C96.2848 13.7661 96.6991 13.6688 97.1128 13.6688C97.4786 13.632 97.8315 13.6931 98.1728 13.8148C98.5019 13.9489 98.8063 14.1436 99.0623 14.3995C99.4889 14.8868 99.6957 15.7155 99.6957 16.8855V23.6496H101.875V16.546C101.887 15.0447 101.535 13.8609 100.842 12.9823C100.148 12.1032 99.1151 11.6638 97.7419 11.6638Z"
+                                fill="#5F6368" />
+                            <path
+                                d="M111.77 12.0918C111.052 11.7991 110.286 11.6649 109.52 11.7018C108.754 11.6893 107.975 11.8359 107.27 12.153C106.565 12.4699 105.933 12.9454 105.434 13.5301C104.376 14.7369 103.804 16.2844 103.841 17.8812C103.779 19.5142 104.375 21.1111 105.482 22.3054C106.029 22.8901 106.687 23.3412 107.428 23.6458C108.158 23.9503 108.961 24.0844 109.751 24.06C110.895 24.0969 112.001 23.7799 112.937 23.1459C113.765 22.5856 114.409 21.7931 114.798 20.879L112.864 20.0746C112.305 21.4031 111.259 22.0614 109.69 22.0614C109.228 22.0739 108.766 21.9759 108.328 21.8055C107.902 21.6352 107.501 21.3787 107.173 21.0499C106.432 20.3185 106.018 19.3196 106.006 18.2831H115.175L115.2 17.8806C115.2 16.0036 114.689 14.5048 113.655 13.3834C113.12 12.8231 112.488 12.3844 111.77 12.0918ZM106.163 16.4735C106.345 15.681 106.771 14.9746 107.379 14.438C107.963 13.9263 108.705 13.658 109.471 13.6705C110.577 13.6705 111.404 13.975 111.964 14.5722C112.487 15.072 112.804 15.7547 112.877 16.4735H106.163Z"
+                                fill="#5F6368" />
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_4011_587" x1="89.4535" y1="30.1981" x2="83.3553"
+                                y2="-10.7284" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1E8E3E" />
+                                <stop offset="1" stop-color="#34A853" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_4011_587" x1="-17.1731" y1="31.5503" x2="-12.8598"
+                                y2="-9.84521" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FCC934" />
+                                <stop offset="1" stop-color="#FBBC04" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_4011_587" x1="-0.0395731" y1="15.8012" x2="115.251"
+                                y2="15.8012" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D93025" />
+                                <stop offset="1" stop-color="#EA4335" />
+                            </linearGradient>
+                            <clipPath id="clip0_4011_587">
+                                <rect width="116" height="32" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav-list" role="menu" aria-label="Navigation drawer">
+                    <li class="header__nav-li selected-link " role="menuitem">
+                        <a href="#" class="header__nav-li-link">Браузер</a>
+                    </li>
+                    <li class="header__nav-li selected-link " role="menuitem">
+                        <a href="#" class="header__nav-li-link">Функции</a>
+                    </li>
+                    <li class="header__nav-li selected-link " role="menuitem">
+                        <a href="#" class="header__nav-li-link">Преимущества</a>
+                    </li>
+                    <li class="header__nav-li selected-link " role="menuitem">
+                        <a href="#" class="header__nav-li-link">Вопросы</a>
+                    </li>
+                    <li class="header__nav-li selected-link " role="menuitem">
+                        <a href="#" class="header__nav-li-link">Поддержка</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__cta">
+                <a href="" class="header__btn btn">Скачать Chrome</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__overlay">
+                <svg class="hero__overlay-img hero__overlay-img-lg" width="1522" height="1008" viewBox="0 0 1522 1008"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4081_5833)">
+                        <rect x="1174" y="832" width="832" height="348" transform="rotate(-90 1174 832)"
+                            fill="#E8F0FE" />
+                        <rect x="600" y="514" width="922" height="348" rx="12" fill="#8AB4F8" />
+                        <circle cx="1007" cy="207" r="48" stroke="#202125" stroke-width="4" />
+                        <circle cx="1256" cy="338" r="162" fill="#185ABC" />
+                        <circle cx="1118" cy="133" r="24" fill="#F9AB00" />
+                        <circle cx="156" cy="852" r="154" stroke="#F9AB00" stroke-width="4" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4081_5833">
+                            <rect width="1522" height="1008" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <svg class="hero__overlay-img hero__overlay-img-md" width="768" height="980" viewBox="0 0 768 980"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_135_45186)">
+                        <rect x="516" y="832" width="832" height="252" transform="rotate(-90 516 832)" fill="#E8F0FE" />
+                        <rect y="632" width="768" height="348" rx="12" fill="#8AB4F8" />
+                        <circle cx="528" cy="208" r="38" stroke="#202125" stroke-width="4" />
+                        <circle cx="606" cy="414" r="118" fill="#185ABC" />
+                        <circle cx="620" cy="126" r="14" fill="#F9AB00" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_135_45186">
+                            <rect width="768" height="980" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <svg class="hero__overlay-img hero__overlay-img-sm" width="360" height="780" viewBox="0 0 360 780"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="188" y="780" width="780" height="172" transform="rotate(-90 188 780)" fill="#E8F0FE" />
+                    <rect y="572" width="360" height="208" rx="8" fill="#8AB4F8" />
+                    <circle cx="132" cy="412" r="14.5" stroke="#202125" stroke-width="3" />
+                    <circle cx="248" cy="476" r="100" fill="#185ABC" />
+                    <circle cx="160" cy="384" r="8" fill="#F9AB00" />
+                </svg>
+
+            </div>
+            <div class="hero__slider">
+                <div class="hero__slider-header">
+                    <img src="/src/image/Chrome Navbar.svg" class="hero__slider-browser" alt="">
+                </div>
+                <div class="hero__slider-content">
+                    <div class="hero__slider-slides">
+                        <div class="hero__slider-slide"><img src="/src/image/slider/IMG_BG-1.jpg" alt=""></div>
+                        <div class="hero__slider-slide"><img src="/src/image/slider/IMG_BG-2.jpg" alt=""></div>
+                        <div class="hero__slider-slide"><img src="/src/image/slider/IMG_BG-3.jpg" alt=""></div>
+                    </div>
+                    <div class="hero__slider-overlay"><img src="/src/image/slider/google.svg" alt=""></div>
+                    <div class="hero__slider-pagination">
+                        <div class="hero__slider-pagination-bar">
+                            <div class="hero__slider-pagination-fill"></div>
+                        </div>
+                        <div class="hero__slider-pagination-bar">
+                            <div class="hero__slider-pagination-fill"></div>
+                        </div>
+                        <div class="hero__slider-pagination-bar">
+                            <div class="hero__slider-pagination-fill"></div>
+                        </div>
+                    </div>
+                    <div class="hero__slider-progress"></div>
+                </div>
+            </div>
+            <div class="hero__wrapper">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_4075_968)">
+                                <path
+                                    d="M31.9994 47.9997C26.1538 47.9997 21.0416 44.865 18.2498 40.1841L12.6342 30.471L4.28664 16L4.28409 15.9961L4.28153 16C1.55901 20.7065 0 26.1707 0 31.9999C0 49.6726 14.3268 63.9996 31.9994 63.9996L45.749 40.1841C42.9574 44.865 37.8452 47.9997 31.9994 47.9997Z"
+                                    fill="url(#paint0_linear_4075_968)" />
+                                <path
+                                    d="M59.7184 16.0005H56.4821H32.0005C40.8374 16.0005 48.0003 23.1634 48.0003 32.0004C48.0003 34.8318 47.2642 37.4902 45.974 39.7982C45.9011 39.9287 45.8267 40.0566 45.75 40.1846L32.0005 64.0001C49.6732 64.0001 63.9999 49.6733 63.9999 32.0004C63.9999 26.1714 62.441 20.7071 59.7184 16.0005Z"
+                                    fill="url(#paint1_linear_4075_968)" />
+                                <path
+                                    d="M59.7132 15.9999C54.1787 6.43707 43.8429 0 32.0005 0C20.1581 0 9.81979 6.43324 4.28516 15.9961L10.4048 26.755L18.027 39.7974C16.7368 37.4897 16.0007 34.8311 16.0007 31.9997C16.0007 23.1627 23.1636 15.9999 32.0005 15.9999H59.7132Z"
+                                    fill="url(#paint2_linear_4075_968)" />
+                                <path
+                                    d="M47.9979 32.0004C47.9979 23.1634 40.8353 16.0005 31.9982 16.0005C23.1612 16.0005 15.9985 23.1634 15.9985 32.0004C15.9985 34.8318 16.7344 37.4902 18.0248 39.7982L18.2488 40.1846C21.0403 44.8655 26.1526 48.0003 31.9982 48.0003C37.8439 48.0003 42.9562 44.8655 45.7477 40.1846L45.9717 39.7982C47.2619 37.4902 47.9979 34.8318 47.9979 32.0004Z"
+                                    fill="white" />
+                                <path
+                                    d="M45.1185 32.0003C45.1185 24.7543 39.2446 18.8804 31.9987 18.8804C24.7526 18.8804 18.8789 24.7543 18.8789 32.0003C18.8789 34.3223 19.483 36.5021 20.5402 38.3938L20.7233 38.7113C23.0133 42.5487 27.2051 45.1202 31.9987 45.1202C36.7921 45.1202 40.9841 42.5487 43.274 38.7113L43.457 38.3938C44.5143 36.5021 45.1185 34.3223 45.1185 32.0003Z"
+                                    fill="#1A73E8" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_4075_968" x1="35.5243" y1="62.458" x2="7.65444"
+                                    y2="14.1804" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#1E8E3E" />
+                                    <stop offset="1" stop-color="#34A853" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_4075_968" x1="27.2303" y1="64.5391" x2="55.1002"
+                                    y2="16.2466" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FCC934" />
+                                    <stop offset="1" stop-color="#FBBC04" />
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_4075_968" x1="4.26612" y1="20.1554" x2="59.7376"
+                                    y2="20.1554" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#D93025" />
+                                    <stop offset="1" stop-color="#EA4335" />
+                                </linearGradient>
+                                <clipPath id="clip0_4075_968">
+                                    <rect width="64" height="64" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Браузер, который работает для вас
+                    </h1>
+                    <p class="hero__subtitle">Обновленный Chrome для еще более удобной работы</p>
+                    <a href="#" class="hero__cta btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.9643 8.23077C21.4634 8.23077 22 9.51235 22 10.5556V18.1111C22 19.1543 20.7848 20 19.2857 20H5.71429C4.21523 20 3 19.1543 3 18.1111V10.5556C3 9.51235 3.53665 8.23077 5.03571 8.23077M12.5 3V15.4231M12.5 15.4231L8.42857 11.6288M12.5 15.4231L16.5714 11.6288"
+                                stroke="white" stroke-width="1.75" stroke-linecap="round" />
+                        </svg>
+                        Скачать для Windows</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="features__wrapper">
+                <div class="features__header">
+                    <h2 class="features__title">
+                        <span class="features__title-marker">
+                            <svg width="49" height="48" viewBox="0 0 49 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.6964 15L13.9011 15.7389C12.4246 15.8995 11.1587 16.8648 10.6131 18.2462L8.52331 23.5378C7.83691 25.2758 9.69713 26.9222 11.3388 26.0294L16.3578 23.4518M33.16 28L32.421 34.7954C32.2606 36.2718 31.2952 37.5378 29.9138 38.0832L24.6222 40.173C22.8842 40.8596 21.238 38.9992 22.1306 37.3576L24.9118 32.1754M40.4996 8.00003C42.4996 9.99999 41.1188 19.224 34.578 25.7648C31.9808 28.362 29.1608 30.346 26.4996 31.5894C21.8818 33.7472 23.3554 30.2286 20.8132 27.6864C18.2709 25.144 14.7524 26.618 16.9102 22C18.1536 19.3389 20.1376 16.5189 22.7348 13.9216C29.2756 7.38081 38.4996 6.00005 40.4996 8.00003ZM15.5508 38.1784C14.2219 39.5074 7.85059 41.066 7.85059 41.066C7.85059 41.066 9.40921 34.6946 10.7382 33.3658C12.0672 32.0368 14.2219 32.0368 15.5508 33.3658C16.8798 34.6946 16.8798 36.8494 15.5508 38.1784ZM34.4998 16C34.4998 17.1046 33.6044 18 32.4998 18C31.3954 18 30.4998 17.1046 30.4998 16C30.4998 14.8954 31.3954 14 32.4998 14C33.6044 14 34.4998 14.8954 34.4998 16Z"
+                                    stroke="#1967D2" stroke-width="4" stroke-linecap="round" />
                             </svg>
-                        </button>
+                            Безграничные</span>
+                        возможности Chrome
+                    </h2>
+                </div>
+                <div class="features__row">
+                    <div class="features__col">
+                        <div class="features__item features__item-md features__item-speed">
+                            <h3 class="features__item-title">Высокая скорость</h3>
+                            <div class="features__item-description">Наслаждайтесь молниеносной загрузкой страниц и
+                                плавным просмотром</div>
+                            <div class="features__item-icon-chrome">
+                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
+                                    <g clip-path="url(#clip0_110_39279)">
+                                        <path
+                                            d="M50.001 74.9988C63.8088 74.9988 75.002 63.8052 75.002 49.9973C75.002 36.1895 63.8088 24.9958 50.001 24.9958C36.1931 24.9958 25 36.1895 25 49.9973C25 63.8052 36.1931 74.9988 50.001 74.9988Z"
+                                            fill="white" />
+                                        <path
+                                            d="M28.349 62.504L6.70077 25.008C2.31128 32.6085 0 41.2305 0 50.008C0 58.7854 2.31023 67.4074 6.6992 75.0079C11.0882 82.6084 17.401 88.9202 25.0026 93.307C32.6041 97.6939 41.2272 100.003 50.0041 99.9999L71.6523 62.504V62.4982C69.4597 66.3008 66.3043 69.4588 62.5038 71.6546C58.7033 73.8503 54.3916 75.0066 50.0025 75.0073C45.6133 75.0079 41.3013 73.8529 37.5002 71.6583C33.6991 69.4635 30.5429 66.3066 28.349 62.505V62.504Z"
+                                            fill="#229342" />
+                                        <path
+                                            d="M71.6507 62.5023L50.003 99.9982C58.7799 99.9998 67.4024 97.6896 75.0035 93.3017C82.6045 88.9137 88.9163 82.6014 93.3042 74.9999C97.6919 67.3984 100.001 58.7758 99.9997 49.9989C99.9981 41.222 97.6858 32.6 93.2953 25H49.9993L49.9941 25.0037C54.3832 25.0016 58.6956 26.1552 62.4975 28.3486C66.2995 30.5423 69.4565 33.6976 71.6518 37.4987C73.8469 41.2996 75.0026 45.6115 75.0025 50.0008C75.0024 54.3901 73.846 58.7014 71.6507 62.5023Z"
+                                            fill="#FBC116" />
+                                        <path
+                                            d="M50.0012 69.7955C60.9324 69.7955 69.7938 60.9341 69.7938 50.0024C69.7938 39.0707 60.9324 30.2098 50.0012 30.2098C39.07 30.2098 30.2086 39.0712 30.2086 50.0024C30.2086 60.9336 39.07 69.7955 50.0012 69.7955Z"
+                                            fill="#1A73E8" />
+                                        <path
+                                            d="M50.0009 25.0015H93.2969C88.9095 17.4 82.5982 11.0871 74.9972 6.69815C67.3964 2.30948 58.7741 -0.000666181 49.9973 1.44102e-07C41.2204 0.000525077 32.5984 2.31182 24.9984 6.70184C17.3981 11.0916 11.087 17.4058 6.70077 25.008L28.349 62.504L28.3553 62.5064C26.1589 58.7062 25.0018 54.3947 25.0004 50.0054C24.999 45.6161 26.1534 41.3039 28.3475 37.5023C30.5411 33.7007 33.6981 30.5437 37.4991 28.3495C41.3002 26.1553 45.6125 24.9999 50.002 25.001L50.0009 25.0015Z"
+                                            fill="#E33B2E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_110_39279">
+                                            <rect width="99.9997" height="100" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
+                        </div>
+                        <div class="features__item features__item-lg features__item-extensibility">
+                            <h3 class="features__item-title">Расширяемость</h3>
+                            <div class="features__item-description">Тысячи доступных расширений и приложений для
+                                повышения производительности</div>
+                            <img src="/src/image/IMG_extension.jpg" alt="" class="features__item-image">
+                        </div>
+                    </div>
+                    <div class="features__col">
+                        <div class="features__item features__item-lg features__item-integration">
+                            <h3 class="features__item-title">Интеграция с Google</h3>
+                            <div class="features__item-description">Синхронизируйте все свои устройства с помощью вашего
+                                Google аккаунта</div>
+                            <img src="/src/image/IMG_integration.jpg" alt="" class="features__item-image">
+                        </div>
+                        <div class="features__item features__item-md features__item-security">
+                            <h3 class="features__item-title">Максимальная безопасность</h3>
+                            <div class="features__item-description">Защитите свои данные с помощью встроенных средств
+                                защиты</div>
+                            <div class="features__item-icon-key">
+                                <svg width="160" height="84" viewBox="0 0 160 84" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M42.895 84C66.033 84 84.79 65.196 84.79 42C84.79 18.804 66.033 0 42.895 0C19.757 0 1 18.804 1 42C1 65.196 19.757 84 42.895 84ZM42.895 61.8947C53.8551 61.8947 62.74 52.9876 62.74 42C62.74 31.0124 53.8551 22.1053 42.895 22.1053C31.9349 22.1053 23.05 31.0124 23.05 42C23.05 52.9876 31.9349 61.8947 42.895 61.8947Z"
+                                        fill="#1967D2" />
+                                    <mask id="mask0_113_10937" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="55"
+                                        y="30" width="106" height="42">
+                                        <rect x="55" y="30" width="106" height="42" fill="#D9D9D9" />
+                                    </mask>
+                                    <g mask="url(#mask0_113_10937)">
+                                        <path class="keys keys-2" d="M84 31H120V57H84V31Z" fill="#FBC010" />
+                                        <path class="keys keys-3" d="M120 31H160V57H120V31Z" fill="#1B7D3A" />
+                                        <path class="keys keys-1" d="M67 31H87V57H67V31Z" fill="#D94B39" />
+                                        <path class="keys keys-1"
+                                            d="M59.4391 31C61.5284 34.1508 62.7458 37.9328 62.7458 41.9999C62.7458 47.985 60.1095 53.3528 55.9375 57H82.0449C83.8221 52.3416 84.7958 47.2847 84.7958 41.9999C84.7958 38.1938 84.2908 34.5059 83.3443 31H59.4391Z"
+                                            fill="#D94B39" />
+                                        <rect class="keys keys-4" x="120" y="57" width="13" height="14"
+                                            fill="#1B7D3A" />
+                                        <rect class="keys keys-4" x="147" y="57" width="13" height="14"
+                                            fill="#1B7D3A" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="installation">
+            <div class="installation__row">
+                <div class="installation__col installation__col-slider">
+                    <div class="installation__slider">
+                        <div class="installation__slide active"><img src="/src/image/installation/slide-1.png" alt="" class="installation__image"></div>
+                        <div class="installation__slide"><img src="/src/image/installation/slide-2.png" alt="" class="installation__image"></div>
+                        <div class="installation__slide"><img src="/src/image/installation/slide-3.png" alt="" class="installation__image"></div>
+                        <div class="installation__slide"><img src="/src/image/installation/slide-4.png" alt="" class="installation__image"></div>
+                        <div class="installation__slider-nav">
+                            <div class="installation__slider-prev">
+                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_dd_2239_3599)">
+                                        <rect x="6" y="4" width="40" height="40" rx="20" fill="white" />
+                                        <path d="M28.4245 17.3335L21.7578 24.0002L28.4245 30.6668" stroke="#202125"
+                                            stroke-width="1.25" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_dd_2239_3599" x="0" y="0" width="52" height="52"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="2" />
+                                            <feGaussianBlur stdDeviation="3" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.12549 0 0 0 0 0.129412 0 0 0 0 0.145098 0 0 0 0.12 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_2239_3599" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="1" />
+                                            <feGaussianBlur stdDeviation="1" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
+                                            <feBlend mode="normal" in2="effect1_dropShadow_2239_3599"
+                                                result="effect2_dropShadow_2239_3599" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_2239_3599"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="installation__slider-next">
+                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_dd_2239_3597)">
+                                        <rect x="6" y="4" width="40" height="40" rx="20" fill="white" />
+                                        <path d="M23.5762 17.3335L30.2428 24.0002L23.5762 30.6668" stroke="#202125"
+                                            stroke-width="1.25" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_dd_2239_3597" x="0" y="0" width="52" height="52"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="2" />
+                                            <feGaussianBlur stdDeviation="3" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0.12549 0 0 0 0 0.129412 0 0 0 0 0.145098 0 0 0 0.12 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_2239_3597" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="1" />
+                                            <feGaussianBlur stdDeviation="1" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
+                                            <feBlend mode="normal" in2="effect1_dropShadow_2239_3597"
+                                                result="effect2_dropShadow_2239_3597" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_2239_3597"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="installation__col">
+                    <div class="installation__wrapper">
+                        <div class="installation__tabs">
+                            <div class="installation__tab active">
+                                <div class="installation__bar">
+                                    <div class="installation__bar-fill"></div>
+                                </div>
+                                <div class="installation__content">
+                                    <div class="installation__title">
+                                        Установка
+                                    </div>
+                                    <div class="installation__description" style="display: block;">
+                                        Простая установка и автоматические обновления для вашей безопасности
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="installation__tab">
+                                <div class="installation__bar">
+                                    <div class="installation__bar-fill"></div>
+                                </div>
+                                <div class="installation__content">
+                                    <div class="installation__title">
+                                        Оптимизация
+                                    </div>
+                                    <div class="installation__description">
+                                        Оптимизирован для работы на любом устройстве и операционной системе
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="installation__tab">
+                                <div class="installation__bar">
+                                    <div class="installation__bar-fill"></div>
+                                </div>
+                                <div class="installation__content">
+                                    <div class="installation__title">
+                                        Интерфейс
+                                    </div>
+                                    <div class="installation__description">
+                                        Интуитивно понятный и настраиваемый интерфейс для вашего удобства
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="installation__tab">
+                                <div class="installation__bar">
+                                    <div class="installation__bar-fill"></div>
+                                </div>
+                                <div class="installation__content">
+                                    <div class="installation__title">
+                                        Поддержка
+                                    </div>
+                                    <div class="installation__description">
+                                        Круглосуточная поддержка и обширная база знаний
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="installation__cta btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.9643 8.23077C21.4634 8.23077 22 9.51235 22 10.5556V18.1111C22 19.1543 20.7848 20 19.2857 20H5.71429C4.21523 20 3 19.1543 3 18.1111V10.5556C3 9.51235 3.53665 8.23077 5.03571 8.23077M12.5 3V15.4231M12.5 15.4231L8.42857 11.6288M12.5 15.4231L16.5714 11.6288"
+                                    stroke="white" stroke-width="1.75" stroke-linecap="round" />
+                            </svg>
+                            Скачать для Windows</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="faq__wrapper">
+                <div class="faq__header">
+                    <h2 class="faq__title">
+                        Часто задаваемые
+                        <span class="faq__title-marker">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31.232 9.77584L32.6462 8.36162L32.6257 8.34113L32.6047 8.32125L31.232 9.77584ZM38.2246 16.7683L39.6388 15.3541L39.6388 15.3541L38.2246 16.7683ZM22.0413 17.1354L20.7152 18.6326L23.7095 21.2848L25.0356 19.7877L22.0413 17.1354ZM27.2308 6L28.6034 4.54541L25.8313 7.42879L27.2308 6ZM27.8366 22.4311L26.2677 23.6714L28.7483 26.8093L30.3172 25.5689L27.8366 22.4311ZM40.3852 21.7574L41.7994 23.1717L44.6278 20.3433L43.2136 18.9291L40.3852 21.7574ZM17.7577 33.071C18.5388 32.29 18.5388 31.0237 17.7577 30.2426C16.9767 29.4616 15.7103 29.4616 14.9293 30.2426L17.7577 33.071ZM7.85823 37.3138L6.44403 38.7281L9.27249 41.5565L10.6867 40.1422L7.85823 37.3138ZM29.8178 11.1901L36.8104 18.1826L39.6388 15.3541L32.6462 8.36162L29.8178 11.1901ZM29.7349 8.44972L22.0413 17.1354L25.0356 19.7877L32.7291 11.102L29.7349 8.44972ZM32.6047 8.32125L28.6034 4.54541L25.8581 7.45459L29.8594 11.2304L32.6047 8.32125ZM25.8313 7.42879L36.8251 18.1971L39.6241 15.3396L28.6303 4.57121L25.8313 7.42879ZM36.9843 15.1994L27.8366 22.4311L30.3172 25.5689L39.4649 18.3373L36.9843 15.1994ZM36.8104 18.1825L40.3852 21.7574L43.2136 18.9291L39.6388 15.3541L36.8104 18.1825ZM14.9293 30.2426L7.85823 37.3138L10.6867 40.1422L17.7577 33.071L14.9293 30.2426Z"
+                                    fill="#D56E0C" />
+                                <path
+                                    d="M8.62349 20.6121C7.54137 21.1807 7.32033 22.6353 8.18469 23.4997L24.5002 39.8151C25.3646 40.6795 26.819 40.4585 27.3876 39.3763C29.6034 35.1591 28.818 29.9909 25.4496 26.6223L21.3776 22.5503C18.0089 19.1817 12.8407 18.3963 8.62349 20.6121Z"
+                                    fill="#D56E0C" stroke="#D56E0C" stroke-width="4" stroke-linecap="round" />
+                            </svg>
+                            вопросы</span>
+                    </h2>
+                </div>
+                <div class="faq__accordion">
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Как сделать Chrome браузером по умолчанию?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Чтобы сделать Google Chrome браузером по умолчанию: Откройте Chrome, нажмите на три точки
+                            в правом верхнем углу, выберите «Настройки», затем «Приложения», найдите «Браузер», нажмите
+                            на «Браузер по умолчанию» и выберите «Google Chrome» из списка установленных браузеров.
+                        </div>
+                    </div>
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Как проверить версию Chrome?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Чтобы проверить версию Chrome, откройте браузер, нажмите на три точки в правом верхнем углу
+                            окна (меню), выберите раздел «Справка» и далее «О Google Chrome». В этом разделе вы увидите
+                            текущую версию браузера.
+                        </div>
+                    </div>
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Как обновить Chrome до последней версии?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Chrome автоматически проверяет наличие обновлений. Чтобы убедиться, что вы используете
+                            последнюю версию, просто перезапустите браузер. Если обновление доступно, оно будет
+                            загружено и установлено автоматически.
+                        </div>
+                    </div>
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Как включить режим инкогнито? </span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Для включения режима инкогнито в Chrome откройте браузер, нажмите на три точки в правом
+                            верхнем углу окна (меню) и выберите «Новое окно инкогнито». В этом режиме браузер
+                            не сохраняет историю просмотра, данные ввода и файлы cookie.
+                        </div>
+                    </div>
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Как очистить историю и данные браузера?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Чтобы очистить историю и данные браузера в Chrome, откройте браузер, нажмите на три точки
+                            в правом верхнем углу окна (меню), выберите «История», затем «Очистить данные браузера».
+                            Выберите период и тип данных, которые вы хотите удалить, и нажмите «Очистить данные».
+                        </div>
+                    </div>
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Как активировать защиту от фишинга?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Защита от фишинга в Google Chrome включена по умолчанию. Она автоматически предупреждает
+                            вас о подозрительных сайтах, предотвращая переход на вредоносные страницы. Вы можете
+                            проверить настройки защиты от фишинга в разделе «Настройки» браузера.
+                        </div>
+                    </div>
+                    <div class="faq__accordion-item">
+                        <div class="faq__accordion-title">
+                            <span>Какие расширения для безопасности можно установить в Chrome?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="faq__accordion-text">
+                            Google Chrome предлагает широкий выбор расширений для усиления безопасности. Вы можете
+                            установить антивирусные программы, блокировщики рекламы, менеджеры паролей и другие
+                            инструменты для защиты данных и повышения безопасности в интернете.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__row">
+                <div class="footer__col footer__col-logo">
+                    <svg width="133" height="36" viewBox="0 0 133 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.973 27C14.6897 27 11.8183 25.2367 10.2503 22.6037L2.40766 9.00002L2.40622 8.99785L2.40479 9.00002C0.875644 11.6474 0 14.7211 0 18C0 27.941 8.04686 36 17.973 36L25.6956 22.6037C24.1277 25.2367 21.2563 27 17.973 27Z"
+                            fill="url(#paint0_linear_4075_5038)" />
+                        <path
+                            d="M33.5418 9.00027H17.9736C22.937 9.00027 26.9601 13.0294 26.9601 18.0003C26.9601 19.593 26.5467 21.0883 25.8221 22.3866C25.7811 22.46 25.7387 22.5317 25.6956 22.6037L17.973 36C27.8991 36 35.9466 27.9413 35.9466 18.0003C35.9466 14.7214 35.071 11.6478 33.5418 9.00027Z"
+                            fill="url(#paint1_linear_4075_5038)" />
+                        <path
+                            d="M33.5387 9.00002C30.4302 3.62088 24.6249 0 17.9735 0C11.322 0 5.51484 3.61872 2.40622 8.99785L5.84391 15.0498L10.125 22.3862C9.40035 21.0881 8.98694 19.5926 8.98694 18C8.98694 13.0291 13.0102 9.00027 17.9736 9.00027L33.5387 9.00002Z"
+                            fill="url(#paint2_linear_4075_5038)" />
+                        <path
+                            d="M26.959 18.0003C26.959 13.0294 22.9359 9.00027 17.9725 9.00027C13.0091 9.00027 8.98694 13.0291 8.98694 18C8.98694 19.5926 9.40035 21.0881 10.125 22.3862L10.2503 22.6037C11.8183 25.2367 14.6897 27 17.973 27C21.2563 27 24.1277 25.2367 25.6956 22.6037L25.8209 22.3866C26.5456 21.0883 26.959 19.593 26.959 18.0003Z"
+                            fill="white" />
+                        <path
+                            d="M25.3414 18.0002C25.3414 13.9243 22.0422 10.6202 17.9725 10.6202C13.9026 10.6202 10.6035 13.9243 10.6035 18.0002C10.6035 19.3064 10.9428 20.5325 11.5366 21.5966L11.6395 21.7752C12.9257 23.9338 15.2801 25.3802 17.9725 25.3802C20.6648 25.3802 23.0193 23.9338 24.3054 21.7752L24.4082 21.5966C25.002 20.5325 25.3414 19.3064 25.3414 18.0002Z"
+                            fill="#1A73E8" />
+                        <path
+                            d="M50.0156 25.4297C49.4541 25.4297 48.9062 25.3029 48.4008 25.0639C47.8955 24.8249 47.4461 24.4873 47.0809 24.0653C46.2664 23.1091 45.8171 21.8714 45.8171 20.6057C45.8171 19.34 46.2664 18.1167 47.0809 17.1461C47.4461 16.7242 47.8955 16.3865 48.4008 16.1475C48.9062 15.9085 49.4541 15.7817 50.0156 15.7817C50.83 15.7392 51.6302 15.9646 52.3045 16.4145C52.9789 16.8646 53.4843 17.5256 53.751 18.2989L56.0537 17.3427C55.6044 16.2461 54.846 15.2892 53.8912 14.5865C52.7963 13.8269 51.4901 13.4331 50.1701 13.49C49.2434 13.4619 48.3303 13.6303 47.4741 13.9824C46.6179 14.3338 45.8451 14.868 45.2131 15.529C44.5675 16.2036 44.0758 17.0057 43.7386 17.8776C43.4015 18.7495 43.2469 19.6921 43.2749 20.6201C43.2469 21.5626 43.4015 22.4906 43.7386 23.3626C44.0615 24.2345 44.5669 25.0359 45.2131 25.7112C45.8587 26.3859 46.6172 26.9064 47.4741 27.2578C48.3303 27.6092 49.2434 27.7783 50.1701 27.7503C51.5037 27.7928 52.8237 27.3989 53.9329 26.6112C54.9157 25.9222 55.6741 24.966 56.1371 23.8687L53.9049 22.9125C53.1888 24.5858 51.8976 25.4297 50.0156 25.4297Z"
+                            fill="#5F6368" />
+                        <path
+                            d="M64.972 13.4759C64.0876 13.4759 63.2178 13.715 62.46 14.1512C61.7583 14.517 61.1552 15.0793 60.7482 15.7691H60.6361L60.7482 13.9122V7.77637H58.2321V27.2884H60.7482V19.8918C60.7339 18.837 61.0848 17.8247 61.7304 17.0089C62.0251 16.615 62.4032 16.2918 62.8526 16.0809C63.3012 15.8562 63.7922 15.7575 64.2832 15.7713C66.4853 15.7713 67.5787 17.0089 67.5787 19.4835V27.2884H70.0949V19.1019C70.0949 17.3862 69.6456 16.0218 68.7757 15.0087C67.8908 13.9821 66.6283 13.4759 64.972 13.4759Z"
+                            fill="#5F6368" />
+                        <path
+                            d="M79.5241 13.5976C78.7088 13.6256 77.9216 13.8783 77.2328 14.3283C76.5017 14.7222 75.9539 15.3543 75.6584 16.1276H75.5585V13.9676H73.1141V27.2876H75.6304L75.6584 19.9645C75.6304 19.4447 75.7145 18.9385 75.8971 18.4467C76.0797 17.955 76.3608 17.5194 76.7123 17.1399C77.0215 16.8022 77.3875 16.5359 77.8087 16.3529C78.2163 16.1701 78.6801 16.0722 79.1301 16.0722C79.5801 16.0578 80.0294 16.1284 80.4514 16.2687L81.4076 13.9216C80.8173 13.6961 80.1711 13.5839 79.5241 13.5976Z"
+                            fill="#5F6368" />
+                        <path
+                            d="M94.5679 17.878C94.2448 17.006 93.7397 16.2047 93.0936 15.5293C91.7879 14.2218 90.0046 13.4903 88.1513 13.4903C86.2979 13.4903 84.5281 14.2218 83.2084 15.5293C82.5628 16.2183 82.0567 17.006 81.7339 17.878C81.3967 18.7499 81.2421 19.6923 81.2702 20.6204C81.2421 21.5629 81.3967 22.491 81.7339 23.3629C82.0567 24.2348 82.5621 25.0361 83.2084 25.7116C84.5139 27.019 86.2979 27.7505 88.1513 27.7505C90.0046 27.7505 91.7737 27.019 93.0936 25.7116C93.7255 25.0369 94.2306 24.2348 94.5679 23.3629C94.9052 22.491 95.0596 21.5485 95.0321 20.6204C95.0596 19.6779 94.9052 18.7499 94.5679 17.878ZM92.237 22.5039C92.0133 23.1087 91.676 23.6711 91.2269 24.1354C90.8336 24.5574 90.3561 24.895 89.8226 25.1197C89.3025 25.3587 88.7273 25.4711 88.1513 25.4711C87.5761 25.4711 87.0142 25.3443 86.4808 25.1197C85.9473 24.8806 85.4698 24.5574 85.0765 24.1354C84.6274 23.6573 84.2901 23.1087 84.0664 22.5039C83.8418 21.8991 83.7433 21.2526 83.7717 20.6053C83.7433 19.9588 83.8418 19.3115 84.0664 18.7066C84.2901 18.1019 84.6416 17.5395 85.0765 17.0751C85.4698 16.6533 85.9473 16.3156 86.4808 16.0909C87.0009 15.8519 87.5761 15.7396 88.1513 15.7396C88.7273 15.7396 89.2892 15.8662 89.8226 16.0909C90.3561 16.3299 90.8336 16.6533 91.2269 17.0751C91.676 17.5532 92.0133 18.1019 92.237 18.7066C92.4624 19.3115 92.5601 19.958 92.5317 20.6053C92.5609 21.2526 92.4624 21.8999 92.237 22.5039Z"
+                            fill="#5F6368" />
+                        <path
+                            d="M112.844 13.4583C111.918 13.4303 110.993 13.6556 110.165 14.1063C109.351 14.557 108.664 15.2331 108.188 16.0359C107.43 14.3317 106.027 13.4727 103.951 13.4727C103.123 13.4871 102.323 13.7262 101.608 14.1488C100.878 14.5153 100.275 15.0783 99.84 15.7681H99.7131V13.8961H97.3413V27.288H99.8575V19.8915C99.8425 18.8511 100.181 17.8381 100.828 17.0231C101.109 16.6292 101.475 16.3196 101.897 16.0949C102.319 15.884 102.797 15.7717 103.275 15.7717C103.683 15.7292 104.091 15.7998 104.484 15.9401C104.878 16.0949 105.216 16.3196 105.511 16.6148C106.004 17.1771 106.257 18.1332 106.257 19.4833V27.288H108.701V19.8915C108.686 18.8511 109.037 17.8381 109.671 17.0231C109.952 16.6292 110.318 16.3196 110.741 16.0949C111.162 15.884 111.64 15.7717 112.118 15.7717C112.54 15.7292 112.948 15.7998 113.342 15.9401C113.722 16.0949 114.073 16.3196 114.369 16.6148C114.861 17.1771 115.1 18.1332 115.1 19.4833V27.288H117.616V19.0916C117.63 17.3593 117.223 15.9934 116.423 14.9796C115.623 13.9652 114.43 13.4583 112.844 13.4583Z"
+                            fill="#5F6368" />
+                        <path
+                            d="M129.039 13.9521C128.211 13.6144 127.326 13.4595 126.442 13.5021C125.558 13.4876 124.659 13.6568 123.845 14.0226C123.03 14.3883 122.301 14.937 121.725 15.6116C120.503 17.0041 119.844 18.7897 119.885 20.6322C119.814 22.5164 120.502 24.3589 121.781 25.737C122.412 26.4116 123.171 26.9322 124.027 27.2836C124.87 27.6349 125.797 27.7897 126.709 27.7616C128.029 27.8041 129.307 27.4383 130.388 26.7068C131.343 26.0603 132.087 25.1458 132.536 24.0911L130.303 23.163C129.658 24.6959 128.45 25.4555 126.638 25.4555C126.105 25.4698 125.572 25.3568 125.066 25.1602C124.575 24.9637 124.111 24.6678 123.732 24.2883C122.877 23.4445 122.399 22.2918 122.385 21.0959H132.972L133 20.6315C133 18.4657 132.41 16.7363 131.217 15.4424C130.598 14.7959 129.868 14.2897 129.039 13.9521ZM122.567 19.0079C122.777 18.0934 123.269 17.2784 123.97 16.6593C124.645 16.0688 125.501 15.7592 126.386 15.7737C127.663 15.7737 128.618 16.125 129.264 16.814C129.868 17.3908 130.233 18.1785 130.318 19.0079H122.567Z"
+                            fill="#5F6368" />
+                        <defs>
+                            <linearGradient id="paint0_linear_4075_5038" x1="103.275" y1="34.8439" x2="96.2428"
+                                y2="-12.3802" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1E8E3E" />
+                                <stop offset="1" stop-color="#34A853" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_4075_5038" x1="-19.8266" y1="36.4042" x2="-14.8525"
+                                y2="-11.3605" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FCC934" />
+                                <stop offset="1" stop-color="#FBBC04" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_4075_5038" x1="-0.0456877" y1="18.2322" x2="133.058"
+                                y2="18.2322" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D93025" />
+                                <stop offset="1" stop-color="#EA4335" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="footer__social">
+                        <a href="#"><img src="/src/image/yb.svg" alt=""></a>
+                        <a href="#"><img src="/src/image/fb.svg" alt=""></a>
+                        <a href="#"><img src="/src/image/tw.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__nav">
+                        <ul>
+                            <li>Браузер</li>
+                            <li>Функции</li>
+                            <li>Преимущества</li>
+                            <li>Вопросы</li>
+                        </ul>
+                        <ul>
+                            <li>Поддержка</li>
+                            <li>О нас</li>
+                            <li>Условия использования</li>
+                            <li>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.67709 5.5L9.34611 11.3874M9.34611 11.3874L3.67709 18.5M9.34611 11.3874L10.6354 12.7263C11.4038 13.4435 12.5963 13.4435 13.3647 12.7263L14.72 11.3874M20.5 5.67709L14.72 11.3874M14.72 11.3874L20.5 18.3229M3.67709 18.5C4.02965 18.8112 4.49278 19 5 19H19C19.5973 19 20.1335 18.7381 20.5 18.3229M3.67709 18.5C3.26188 18.1335 3 17.5973 3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V17C21 17.5072 20.8112 17.9703 20.5 18.3229"
+                                        stroke="#5F6368" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                E-mail
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row footer__bottom">
+                <div class="footer__copyright">
+                    Все товарные знаки являются собственностью их правообладателей
+                </div>
+                <div class="footer__pp">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__op">
+                    <a href="https://www.google.com/intl/ru/chrome/">Официальная страница для скачивания Google
+                        Chrome</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal">
+        <div class="modal__menu">
+            <div class="modal__header">
                 <div class="header__lockup">
                     <div class="header__logo">
                         <svg viewBox="0 0 116 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_4011_587)">
-                            <path d="M15.5676 23.4C12.7237 23.4 10.2366 21.8718 8.87846 19.5899L2.08543 7.80002L2.08419 7.79813L2.08294 7.80002C0.758453 10.0945 0 12.7583 0 15.6C0 24.2155 6.96991 31.2 15.5676 31.2L22.2567 19.5899C20.8986 21.8718 18.4115 23.4 15.5676 23.4Z" fill="url(#paint0_linear_4011_587)"/>
-                            <path d="M29.0528 7.80024H15.5681C19.8673 7.80024 23.3519 11.2922 23.3519 15.6003C23.3519 16.9806 22.9939 18.2766 22.3662 19.4017C22.3307 19.4653 22.294 19.5275 22.2567 19.5899L15.5676 31.2C24.1652 31.2 31.1357 24.2158 31.1357 15.6003C31.1357 12.7586 30.3773 10.0947 29.0528 7.80024Z" fill="url(#paint1_linear_4011_587)"/>
-                            <path d="M29.0501 7.80002C26.3576 3.13809 21.3293 0 15.568 0C9.80673 0 4.77676 3.13622 2.08419 7.79813L5.0618 13.0431L8.76993 19.4014C8.14226 18.2763 7.78418 16.9803 7.78418 15.6C7.78418 11.2919 11.269 7.80024 15.5681 7.80024L29.0501 7.80002Z" fill="url(#paint2_linear_4011_587)"/>
-                            <path d="M23.3509 15.6003C23.3509 11.2922 19.8663 7.80024 15.5671 7.80024C11.268 7.80024 7.78338 11.2922 7.78338 15.6003C7.78338 16.9806 8.14139 18.2766 8.76913 19.4017L8.87846 19.5899C10.2366 21.8718 12.7237 23.4 15.5676 23.4C18.4115 23.4 20.8986 21.8718 22.2567 19.5899L22.3652 19.4017C22.9929 18.2766 23.3509 16.9806 23.3509 15.6003Z" fill="white"/>
-                            <path d="M21.9498 15.6002C21.9498 12.0677 19.0922 9.20418 15.5671 9.20418C12.0419 9.20418 9.18441 12.0677 9.18441 15.6002C9.18441 16.7322 9.47829 17.7948 9.99264 18.7171L10.0817 18.8718C11.1958 20.7426 13.2351 21.9962 15.5671 21.9962C17.8991 21.9962 19.9385 20.7426 21.0525 18.8718L21.1415 18.7171C21.6559 17.7948 21.9498 16.7322 21.9498 15.6002Z" fill="#1A73E8"/>
-                            <path d="M43.3218 22.0391C42.8354 22.0391 42.3609 21.9292 41.9231 21.7221C41.4854 21.5149 41.0962 21.2223 40.7799 20.8566C40.0743 20.0279 39.6851 18.9552 39.6851 17.8583C39.6851 16.7613 40.0743 15.7011 40.7799 14.86C41.0962 14.4943 41.4854 14.2017 41.9231 13.9945C42.3609 13.7873 42.8354 13.6775 43.3218 13.6775C44.0272 13.6407 44.7203 13.8359 45.3044 14.2259C45.8885 14.616 46.3263 15.1888 46.5573 15.859L48.5518 15.0303C48.1626 14.0799 47.5057 13.2507 46.6787 12.6416C45.7303 11.9833 44.5989 11.642 43.4556 11.6913C42.6529 11.6669 41.8621 11.813 41.1204 12.1181C40.3788 12.4227 39.7094 12.8856 39.162 13.4584C38.6029 14.0431 38.1769 14.7382 37.8849 15.494C37.5929 16.2496 37.459 17.0664 37.4833 17.8708C37.459 18.6876 37.5929 19.4919 37.8849 20.2476C38.1645 21.0032 38.6023 21.6978 39.162 22.2831C39.7212 22.8677 40.3782 23.3189 41.1204 23.6234C41.8621 23.9279 42.6529 24.0745 43.4556 24.0503C44.6107 24.0871 45.754 23.7457 46.7148 23.063C47.5661 22.4659 48.223 21.6372 48.6241 20.6862L46.6905 19.8575C46.0703 21.3077 44.9519 22.0391 43.3218 22.0391Z" fill="#5F6368"/>
-                            <path d="M56.2765 11.6791C55.5105 11.6791 54.7571 11.8863 54.1007 12.2644C53.4929 12.5814 52.9706 13.0687 52.618 13.6665H52.5209L52.618 12.0572V6.73952H50.4386V23.6499H52.618V17.2396C52.6056 16.3254 52.9095 15.4481 53.4687 14.7411C53.724 14.3997 54.0515 14.1196 54.4407 13.9367C54.8293 13.742 55.2546 13.6565 55.6799 13.6684C57.5873 13.6684 58.5343 14.7411 58.5343 16.8857V23.6499H60.7138V16.555C60.7138 15.068 60.3246 13.8856 59.5711 13.0076C58.8046 12.1178 57.7111 11.6791 56.2765 11.6791Z" fill="#5F6368"/>
-                            <path d="M68.881 11.7846C68.1748 11.8088 67.493 12.0279 66.8964 12.4179C66.2631 12.7592 65.7886 13.3071 65.5327 13.9773H65.4461V12.1053H63.3289V23.6493H65.5084L65.5327 17.3025C65.5084 16.852 65.5813 16.4133 65.7394 15.9871C65.8976 15.561 66.1411 15.1835 66.4456 14.8546C66.7133 14.5619 67.0303 14.3311 67.3952 14.1725C67.7483 14.0141 68.1499 13.9292 68.5398 13.9292C68.9295 13.9167 69.3187 13.9779 69.6842 14.0996L70.5124 12.0653C70.0012 11.87 69.4414 11.7727 68.881 11.7846Z" fill="#5F6368"/>
-                            <path d="M81.9115 15.4942C81.6316 14.7385 81.1941 14.0441 80.6344 13.4587C79.5035 12.3256 77.9589 11.6916 76.3536 11.6916C74.7483 11.6916 73.2153 12.3256 72.0723 13.4587C71.5131 14.0559 71.0746 14.7385 70.7951 15.4942C70.503 16.2499 70.3691 17.0667 70.3934 17.871C70.3691 18.6879 70.503 19.4922 70.7951 20.2478C71.0746 21.0035 71.5124 21.698 72.0723 22.2833C73.203 23.4165 74.7483 24.0505 76.3536 24.0505C77.9589 24.0505 79.4912 23.4165 80.6344 22.2833C81.1818 21.6986 81.6193 21.0035 81.9115 20.2478C82.2036 19.4922 82.3374 18.6754 82.3135 17.871C82.3374 17.0542 82.2036 16.2499 81.9115 15.4942ZM79.8925 19.5034C79.6987 20.0275 79.4066 20.5149 79.0175 20.9174C78.677 21.2831 78.2633 21.5757 77.8013 21.7704C77.3508 21.9776 76.8525 22.0749 76.3536 22.0749C75.8554 22.0749 75.3687 21.9651 74.9066 21.7704C74.4446 21.5632 74.031 21.2831 73.6904 20.9174C73.3013 20.503 73.0092 20.0275 72.8154 19.5034C72.6209 18.9792 72.5356 18.4189 72.5601 17.8579C72.5356 17.2976 72.6209 16.7366 72.8154 16.2124C73.0092 15.6883 73.3136 15.2009 73.6904 14.7985C74.031 14.4328 74.4446 14.1401 74.9066 13.9454C75.3571 13.7383 75.8554 13.641 76.3536 13.641C76.8525 13.641 77.3392 13.7507 77.8013 13.9454C78.2633 14.1526 78.677 14.4328 79.0175 14.7985C79.4066 15.2128 79.6987 15.6883 79.8925 16.2124C80.0878 16.7366 80.1724 17.2969 80.1478 17.8579C80.1731 18.4189 80.0878 18.9799 79.8925 19.5034Z" fill="#5F6368"/>
-                            <path d="M97.7419 11.6638C96.9399 11.6396 96.138 11.8348 95.4214 12.2255C94.7163 12.6161 94.1212 13.2021 93.7083 13.8978C93.0517 12.4208 91.8369 11.6764 90.0385 11.6764C89.3219 11.6888 88.6285 11.896 88.0095 12.2623C87.3767 12.5799 86.8547 13.0679 86.4779 13.6657H86.368V12.0432H84.3136V23.6496H86.4931V17.2393C86.4801 16.3376 86.7729 15.4597 87.3334 14.7533C87.577 14.412 87.8938 14.1436 88.2597 13.9489C88.6248 13.7661 89.0392 13.6688 89.4535 13.6688C89.8064 13.632 90.16 13.6931 90.5006 13.8148C90.8419 13.9489 91.134 14.1436 91.39 14.3995C91.8167 14.8868 92.0358 15.7155 92.0358 16.8855V23.6496H94.153V17.2393C94.14 16.3376 94.4445 15.4597 94.9933 14.7533C95.237 14.412 95.5537 14.1436 95.9196 13.9489C96.2848 13.7661 96.6991 13.6688 97.1128 13.6688C97.4786 13.632 97.8315 13.6931 98.1728 13.8148C98.5019 13.9489 98.8063 14.1436 99.0623 14.3995C99.4889 14.8868 99.6957 15.7155 99.6957 16.8855V23.6496H101.875V16.546C101.887 15.0447 101.535 13.8609 100.842 12.9823C100.148 12.1032 99.1151 11.6638 97.7419 11.6638Z" fill="#5F6368"/>
-                            <path d="M111.77 12.0918C111.052 11.7991 110.286 11.6649 109.52 11.7018C108.754 11.6893 107.975 11.8359 107.27 12.153C106.565 12.4699 105.933 12.9454 105.434 13.5301C104.376 14.7369 103.804 16.2844 103.841 17.8812C103.779 19.5142 104.375 21.1111 105.482 22.3054C106.029 22.8901 106.687 23.3412 107.428 23.6458C108.158 23.9503 108.961 24.0844 109.751 24.06C110.895 24.0969 112.001 23.7799 112.937 23.1459C113.765 22.5856 114.409 21.7931 114.798 20.879L112.864 20.0746C112.305 21.4031 111.259 22.0614 109.69 22.0614C109.228 22.0739 108.766 21.9759 108.328 21.8055C107.902 21.6352 107.501 21.3787 107.173 21.0499C106.432 20.3185 106.018 19.3196 106.006 18.2831H115.175L115.2 17.8806C115.2 16.0036 114.689 14.5048 113.655 13.3834C113.12 12.8231 112.488 12.3844 111.77 12.0918ZM106.163 16.4735C106.345 15.681 106.771 14.9746 107.379 14.438C107.963 13.9263 108.705 13.658 109.471 13.6705C110.577 13.6705 111.404 13.975 111.964 14.5722C112.487 15.072 112.804 15.7547 112.877 16.4735H106.163Z" fill="#5F6368"/>
+                                <path
+                                    d="M15.5676 23.4C12.7237 23.4 10.2366 21.8718 8.87846 19.5899L2.08543 7.80002L2.08419 7.79813L2.08294 7.80002C0.758453 10.0945 0 12.7583 0 15.6C0 24.2155 6.96991 31.2 15.5676 31.2L22.2567 19.5899C20.8986 21.8718 18.4115 23.4 15.5676 23.4Z"
+                                    fill="url(#paint0_linear_4011_587)" />
+                                <path
+                                    d="M29.0528 7.80024H15.5681C19.8673 7.80024 23.3519 11.2922 23.3519 15.6003C23.3519 16.9806 22.9939 18.2766 22.3662 19.4017C22.3307 19.4653 22.294 19.5275 22.2567 19.5899L15.5676 31.2C24.1652 31.2 31.1357 24.2158 31.1357 15.6003C31.1357 12.7586 30.3773 10.0947 29.0528 7.80024Z"
+                                    fill="url(#paint1_linear_4011_587)" />
+                                <path
+                                    d="M29.0501 7.80002C26.3576 3.13809 21.3293 0 15.568 0C9.80673 0 4.77676 3.13622 2.08419 7.79813L5.0618 13.0431L8.76993 19.4014C8.14226 18.2763 7.78418 16.9803 7.78418 15.6C7.78418 11.2919 11.269 7.80024 15.5681 7.80024L29.0501 7.80002Z"
+                                    fill="url(#paint2_linear_4011_587)" />
+                                <path
+                                    d="M23.3509 15.6003C23.3509 11.2922 19.8663 7.80024 15.5671 7.80024C11.268 7.80024 7.78338 11.2922 7.78338 15.6003C7.78338 16.9806 8.14139 18.2766 8.76913 19.4017L8.87846 19.5899C10.2366 21.8718 12.7237 23.4 15.5676 23.4C18.4115 23.4 20.8986 21.8718 22.2567 19.5899L22.3652 19.4017C22.9929 18.2766 23.3509 16.9806 23.3509 15.6003Z"
+                                    fill="white" />
+                                <path
+                                    d="M21.9498 15.6002C21.9498 12.0677 19.0922 9.20418 15.5671 9.20418C12.0419 9.20418 9.18441 12.0677 9.18441 15.6002C9.18441 16.7322 9.47829 17.7948 9.99264 18.7171L10.0817 18.8718C11.1958 20.7426 13.2351 21.9962 15.5671 21.9962C17.8991 21.9962 19.9385 20.7426 21.0525 18.8718L21.1415 18.7171C21.6559 17.7948 21.9498 16.7322 21.9498 15.6002Z"
+                                    fill="#1A73E8" />
+                                <path
+                                    d="M43.3218 22.0391C42.8354 22.0391 42.3609 21.9292 41.9231 21.7221C41.4854 21.5149 41.0962 21.2223 40.7799 20.8566C40.0743 20.0279 39.6851 18.9552 39.6851 17.8583C39.6851 16.7613 40.0743 15.7011 40.7799 14.86C41.0962 14.4943 41.4854 14.2017 41.9231 13.9945C42.3609 13.7873 42.8354 13.6775 43.3218 13.6775C44.0272 13.6407 44.7203 13.8359 45.3044 14.2259C45.8885 14.616 46.3263 15.1888 46.5573 15.859L48.5518 15.0303C48.1626 14.0799 47.5057 13.2507 46.6787 12.6416C45.7303 11.9833 44.5989 11.642 43.4556 11.6913C42.6529 11.6669 41.8621 11.813 41.1204 12.1181C40.3788 12.4227 39.7094 12.8856 39.162 13.4584C38.6029 14.0431 38.1769 14.7382 37.8849 15.494C37.5929 16.2496 37.459 17.0664 37.4833 17.8708C37.459 18.6876 37.5929 19.4919 37.8849 20.2476C38.1645 21.0032 38.6023 21.6978 39.162 22.2831C39.7212 22.8677 40.3782 23.3189 41.1204 23.6234C41.8621 23.9279 42.6529 24.0745 43.4556 24.0503C44.6107 24.0871 45.754 23.7457 46.7148 23.063C47.5661 22.4659 48.223 21.6372 48.6241 20.6862L46.6905 19.8575C46.0703 21.3077 44.9519 22.0391 43.3218 22.0391Z"
+                                    fill="#5F6368" />
+                                <path
+                                    d="M56.2765 11.6791C55.5105 11.6791 54.7571 11.8863 54.1007 12.2644C53.4929 12.5814 52.9706 13.0687 52.618 13.6665H52.5209L52.618 12.0572V6.73952H50.4386V23.6499H52.618V17.2396C52.6056 16.3254 52.9095 15.4481 53.4687 14.7411C53.724 14.3997 54.0515 14.1196 54.4407 13.9367C54.8293 13.742 55.2546 13.6565 55.6799 13.6684C57.5873 13.6684 58.5343 14.7411 58.5343 16.8857V23.6499H60.7138V16.555C60.7138 15.068 60.3246 13.8856 59.5711 13.0076C58.8046 12.1178 57.7111 11.6791 56.2765 11.6791Z"
+                                    fill="#5F6368" />
+                                <path
+                                    d="M68.881 11.7846C68.1748 11.8088 67.493 12.0279 66.8964 12.4179C66.2631 12.7592 65.7886 13.3071 65.5327 13.9773H65.4461V12.1053H63.3289V23.6493H65.5084L65.5327 17.3025C65.5084 16.852 65.5813 16.4133 65.7394 15.9871C65.8976 15.561 66.1411 15.1835 66.4456 14.8546C66.7133 14.5619 67.0303 14.3311 67.3952 14.1725C67.7483 14.0141 68.1499 13.9292 68.5398 13.9292C68.9295 13.9167 69.3187 13.9779 69.6842 14.0996L70.5124 12.0653C70.0012 11.87 69.4414 11.7727 68.881 11.7846Z"
+                                    fill="#5F6368" />
+                                <path
+                                    d="M81.9115 15.4942C81.6316 14.7385 81.1941 14.0441 80.6344 13.4587C79.5035 12.3256 77.9589 11.6916 76.3536 11.6916C74.7483 11.6916 73.2153 12.3256 72.0723 13.4587C71.5131 14.0559 71.0746 14.7385 70.7951 15.4942C70.503 16.2499 70.3691 17.0667 70.3934 17.871C70.3691 18.6879 70.503 19.4922 70.7951 20.2478C71.0746 21.0035 71.5124 21.698 72.0723 22.2833C73.203 23.4165 74.7483 24.0505 76.3536 24.0505C77.9589 24.0505 79.4912 23.4165 80.6344 22.2833C81.1818 21.6986 81.6193 21.0035 81.9115 20.2478C82.2036 19.4922 82.3374 18.6754 82.3135 17.871C82.3374 17.0542 82.2036 16.2499 81.9115 15.4942ZM79.8925 19.5034C79.6987 20.0275 79.4066 20.5149 79.0175 20.9174C78.677 21.2831 78.2633 21.5757 77.8013 21.7704C77.3508 21.9776 76.8525 22.0749 76.3536 22.0749C75.8554 22.0749 75.3687 21.9651 74.9066 21.7704C74.4446 21.5632 74.031 21.2831 73.6904 20.9174C73.3013 20.503 73.0092 20.0275 72.8154 19.5034C72.6209 18.9792 72.5356 18.4189 72.5601 17.8579C72.5356 17.2976 72.6209 16.7366 72.8154 16.2124C73.0092 15.6883 73.3136 15.2009 73.6904 14.7985C74.031 14.4328 74.4446 14.1401 74.9066 13.9454C75.3571 13.7383 75.8554 13.641 76.3536 13.641C76.8525 13.641 77.3392 13.7507 77.8013 13.9454C78.2633 14.1526 78.677 14.4328 79.0175 14.7985C79.4066 15.2128 79.6987 15.6883 79.8925 16.2124C80.0878 16.7366 80.1724 17.2969 80.1478 17.8579C80.1731 18.4189 80.0878 18.9799 79.8925 19.5034Z"
+                                    fill="#5F6368" />
+                                <path
+                                    d="M97.7419 11.6638C96.9399 11.6396 96.138 11.8348 95.4214 12.2255C94.7163 12.6161 94.1212 13.2021 93.7083 13.8978C93.0517 12.4208 91.8369 11.6764 90.0385 11.6764C89.3219 11.6888 88.6285 11.896 88.0095 12.2623C87.3767 12.5799 86.8547 13.0679 86.4779 13.6657H86.368V12.0432H84.3136V23.6496H86.4931V17.2393C86.4801 16.3376 86.7729 15.4597 87.3334 14.7533C87.577 14.412 87.8938 14.1436 88.2597 13.9489C88.6248 13.7661 89.0392 13.6688 89.4535 13.6688C89.8064 13.632 90.16 13.6931 90.5006 13.8148C90.8419 13.9489 91.134 14.1436 91.39 14.3995C91.8167 14.8868 92.0358 15.7155 92.0358 16.8855V23.6496H94.153V17.2393C94.14 16.3376 94.4445 15.4597 94.9933 14.7533C95.237 14.412 95.5537 14.1436 95.9196 13.9489C96.2848 13.7661 96.6991 13.6688 97.1128 13.6688C97.4786 13.632 97.8315 13.6931 98.1728 13.8148C98.5019 13.9489 98.8063 14.1436 99.0623 14.3995C99.4889 14.8868 99.6957 15.7155 99.6957 16.8855V23.6496H101.875V16.546C101.887 15.0447 101.535 13.8609 100.842 12.9823C100.148 12.1032 99.1151 11.6638 97.7419 11.6638Z"
+                                    fill="#5F6368" />
+                                <path
+                                    d="M111.77 12.0918C111.052 11.7991 110.286 11.6649 109.52 11.7018C108.754 11.6893 107.975 11.8359 107.27 12.153C106.565 12.4699 105.933 12.9454 105.434 13.5301C104.376 14.7369 103.804 16.2844 103.841 17.8812C103.779 19.5142 104.375 21.1111 105.482 22.3054C106.029 22.8901 106.687 23.3412 107.428 23.6458C108.158 23.9503 108.961 24.0844 109.751 24.06C110.895 24.0969 112.001 23.7799 112.937 23.1459C113.765 22.5856 114.409 21.7931 114.798 20.879L112.864 20.0746C112.305 21.4031 111.259 22.0614 109.69 22.0614C109.228 22.0739 108.766 21.9759 108.328 21.8055C107.902 21.6352 107.501 21.3787 107.173 21.0499C106.432 20.3185 106.018 19.3196 106.006 18.2831H115.175L115.2 17.8806C115.2 16.0036 114.689 14.5048 113.655 13.3834C113.12 12.8231 112.488 12.3844 111.77 12.0918ZM106.163 16.4735C106.345 15.681 106.771 14.9746 107.379 14.438C107.963 13.9263 108.705 13.658 109.471 13.6705C110.577 13.6705 111.404 13.975 111.964 14.5722C112.487 15.072 112.804 15.7547 112.877 16.4735H106.163Z"
+                                    fill="#5F6368" />
                             </g>
                             <defs>
-                            <linearGradient id="paint0_linear_4011_587" x1="89.4535" y1="30.1981" x2="83.3553" y2="-10.7284" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#1E8E3E"/>
-                            <stop offset="1" stop-color="#34A853"/>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_4011_587" x1="-17.1731" y1="31.5503" x2="-12.8598" y2="-9.84521" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FCC934"/>
-                            <stop offset="1" stop-color="#FBBC04"/>
-                            </linearGradient>
-                            <linearGradient id="paint2_linear_4011_587" x1="-0.0395731" y1="15.8012" x2="115.251" y2="15.8012" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#D93025"/>
-                            <stop offset="1" stop-color="#EA4335"/>
-                            </linearGradient>
-                            <clipPath id="clip0_4011_587">
-                            <rect width="116" height="32" fill="white"/>
-                            </clipPath>
+                                <linearGradient id="paint0_linear_4011_587" x1="89.4535" y1="30.1981" x2="83.3553"
+                                    y2="-10.7284" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#1E8E3E" />
+                                    <stop offset="1" stop-color="#34A853" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_4011_587" x1="-17.1731" y1="31.5503" x2="-12.8598"
+                                    y2="-9.84521" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FCC934" />
+                                    <stop offset="1" stop-color="#FBBC04" />
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_4011_587" x1="-0.0395731" y1="15.8012" x2="115.251"
+                                    y2="15.8012" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#D93025" />
+                                    <stop offset="1" stop-color="#EA4335" />
+                                </linearGradient>
+                                <clipPath id="clip0_4011_587">
+                                    <rect width="116" height="32" fill="white" />
+                                </clipPath>
                             </defs>
-                        </svg>                            
+                        </svg>
+                        <div class="modal__menu-close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 30L30 10M30 30L10 10" stroke="white" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="modal__nav">
                 <div class="header__nav">
                     <ul class="header__nav-list" role="menu" aria-label="Navigation drawer">
-                        <li class="header__nav-li selected-link " role="menuitem">
-                            <a href="#" class="header__nav-li-link">Браузер</a>
-                        </li>
                         <li class="header__nav-li selected-link " role="menuitem">
                             <a href="#" class="header__nav-li-link">Функции</a>
                         </li>
@@ -79,526 +803,25 @@
                             <a href="#" class="header__nav-li-link">Преимущества</a>
                         </li>
                         <li class="header__nav-li selected-link " role="menuitem">
-                            <a href="#" class="header__nav-li-link">Вопросы</a>
-                        </li>
-                        <li class="header__nav-li selected-link " role="menuitem">
                             <a href="#" class="header__nav-li-link">Поддержка</a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="modal__footer">
                 <div class="header__cta">
                     <a href="" class="header__btn btn">Скачать Chrome</a>
                 </div>
             </div>
         </div>
-        
-        <main class="main">
-            <section class="hero">
-                <div class="hero__overlay">
-                    <svg class="hero__overlay-img hero__overlay-img-lg" width="1522" height="1008" viewBox="0 0 1522 1008" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_4081_5833)">
-                        <rect x="1174" y="832" width="832" height="348" transform="rotate(-90 1174 832)" fill="#E8F0FE"/>
-                        <rect x="600" y="514" width="922" height="348" rx="12" fill="#8AB4F8"/>
-                        <circle cx="1007" cy="207" r="48" stroke="#202125" stroke-width="4"/>
-                        <circle cx="1256" cy="338" r="162" fill="#185ABC"/>
-                        <circle cx="1118" cy="133" r="24" fill="#F9AB00"/>
-                        <circle cx="156" cy="852" r="154" stroke="#F9AB00" stroke-width="4"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_4081_5833">
-                        <rect width="1522" height="1008" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                    <svg class="hero__overlay-img hero__overlay-img-md" width="768" height="980" viewBox="0 0 768 980" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_135_45186)">
-                        <rect x="516" y="832" width="832" height="252" transform="rotate(-90 516 832)" fill="#E8F0FE"/>
-                        <rect y="632" width="768" height="348" rx="12" fill="#8AB4F8"/>
-                        <circle cx="528" cy="208" r="38" stroke="#202125" stroke-width="4"/>
-                        <circle cx="606" cy="414" r="118" fill="#185ABC"/>
-                        <circle cx="620" cy="126" r="14" fill="#F9AB00"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_135_45186">
-                        <rect width="768" height="980" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                    <svg class="hero__overlay-img hero__overlay-img-sm" width="360" height="780" viewBox="0 0 360 780" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="188" y="780" width="780" height="172" transform="rotate(-90 188 780)" fill="#E8F0FE"/>
-                        <rect y="572" width="360" height="208" rx="8" fill="#8AB4F8"/>
-                        <circle cx="132" cy="412" r="14.5" stroke="#202125" stroke-width="3"/>
-                        <circle cx="248" cy="476" r="100" fill="#185ABC"/>
-                        <circle cx="160" cy="384" r="8" fill="#F9AB00"/>
-                    </svg>
-                        
-                </div>
-                <div class="hero__slider">
-                    <div class="hero__slider-header">
-                        <img src="/src/image/Chrome Navbar.svg" class="hero__slider-browser" alt="">
-                    </div>
-                    <div class="hero__slider-content">
-                        <div class="hero__slider-slides">
-                            <div class="hero__slider-slide"><img src="/src/image/slider/IMG_BG-1.jpg" alt=""></div>
-                            <div class="hero__slider-slide"><img src="/src/image/slider/IMG_BG-2.jpg" alt=""></div>
-                            <div class="hero__slider-slide"><img src="/src/image/slider/IMG_BG-3.jpg" alt=""></div>
-                        </div>
-                        <div class="hero__slider-overlay"><img src="/src/image/slider/google.svg" alt=""></div>
-                        <div class="hero__slider-pagination">
-                            <div class="hero__slider-pagination-bar">
-                                <div class="hero__slider-pagination-fill"></div>
-                            </div>
-                            <div class="hero__slider-pagination-bar">
-                                <div class="hero__slider-pagination-fill"></div>
-                            </div>
-                            <div class="hero__slider-pagination-bar">
-                                <div class="hero__slider-pagination-fill"></div>
-                            </div>
-                        </div>
-                        <div class="hero__slider-progress"></div>
-                    </div>
-                </div>
-                <div class="hero__wrapper">
-                    <div class="hero__content">
-                        <h1 class="hero__title">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_4075_968)">
-                                    <path
-                                        d="M31.9994 47.9997C26.1538 47.9997 21.0416 44.865 18.2498 40.1841L12.6342 30.471L4.28664 16L4.28409 15.9961L4.28153 16C1.55901 20.7065 0 26.1707 0 31.9999C0 49.6726 14.3268 63.9996 31.9994 63.9996L45.749 40.1841C42.9574 44.865 37.8452 47.9997 31.9994 47.9997Z"
-                                        fill="url(#paint0_linear_4075_968)" />
-                                    <path
-                                        d="M59.7184 16.0005H56.4821H32.0005C40.8374 16.0005 48.0003 23.1634 48.0003 32.0004C48.0003 34.8318 47.2642 37.4902 45.974 39.7982C45.9011 39.9287 45.8267 40.0566 45.75 40.1846L32.0005 64.0001C49.6732 64.0001 63.9999 49.6733 63.9999 32.0004C63.9999 26.1714 62.441 20.7071 59.7184 16.0005Z"
-                                        fill="url(#paint1_linear_4075_968)" />
-                                    <path
-                                        d="M59.7132 15.9999C54.1787 6.43707 43.8429 0 32.0005 0C20.1581 0 9.81979 6.43324 4.28516 15.9961L10.4048 26.755L18.027 39.7974C16.7368 37.4897 16.0007 34.8311 16.0007 31.9997C16.0007 23.1627 23.1636 15.9999 32.0005 15.9999H59.7132Z"
-                                        fill="url(#paint2_linear_4075_968)" />
-                                    <path
-                                        d="M47.9979 32.0004C47.9979 23.1634 40.8353 16.0005 31.9982 16.0005C23.1612 16.0005 15.9985 23.1634 15.9985 32.0004C15.9985 34.8318 16.7344 37.4902 18.0248 39.7982L18.2488 40.1846C21.0403 44.8655 26.1526 48.0003 31.9982 48.0003C37.8439 48.0003 42.9562 44.8655 45.7477 40.1846L45.9717 39.7982C47.2619 37.4902 47.9979 34.8318 47.9979 32.0004Z"
-                                        fill="white" />
-                                    <path
-                                        d="M45.1185 32.0003C45.1185 24.7543 39.2446 18.8804 31.9987 18.8804C24.7526 18.8804 18.8789 24.7543 18.8789 32.0003C18.8789 34.3223 19.483 36.5021 20.5402 38.3938L20.7233 38.7113C23.0133 42.5487 27.2051 45.1202 31.9987 45.1202C36.7921 45.1202 40.9841 42.5487 43.274 38.7113L43.457 38.3938C44.5143 36.5021 45.1185 34.3223 45.1185 32.0003Z"
-                                        fill="#1A73E8" />
-                                </g>
-                                <defs>
-                                    <linearGradient id="paint0_linear_4075_968" x1="35.5243" y1="62.458" x2="7.65444" y2="14.1804"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#1E8E3E" />
-                                        <stop offset="1" stop-color="#34A853" />
-                                    </linearGradient>
-                                    <linearGradient id="paint1_linear_4075_968" x1="27.2303" y1="64.5391" x2="55.1002" y2="16.2466"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FCC934" />
-                                        <stop offset="1" stop-color="#FBBC04" />
-                                    </linearGradient>
-                                    <linearGradient id="paint2_linear_4075_968" x1="4.26612" y1="20.1554" x2="59.7376" y2="20.1554"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#D93025" />
-                                        <stop offset="1" stop-color="#EA4335" />
-                                    </linearGradient>
-                                    <clipPath id="clip0_4075_968">
-                                        <rect width="64" height="64" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            Браузер, который работает для вас</h1>
-                        <p class="hero__subtitle">Обновленный Chrome для еще более удобной работы</p>
-                        <a href="#" class="hero__cta btn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19.9643 8.23077C21.4634 8.23077 22 9.51235 22 10.5556V18.1111C22 19.1543 20.7848 20 19.2857 20H5.71429C4.21523 20 3 19.1543 3 18.1111V10.5556C3 9.51235 3.53665 8.23077 5.03571 8.23077M12.5 3V15.4231M12.5 15.4231L8.42857 11.6288M12.5 15.4231L16.5714 11.6288" stroke="white" stroke-width="1.75" stroke-linecap="round"/> 
-                                </svg>
-                            Скачать для Windows</a>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="features">
-                <div class="features__wrapper">
-                    <div class="features__header">
-                        <h2 class="features__title">
-                            <span class="features__title-marker">
-                                <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.6964 15L13.9011 15.7389C12.4246 15.8995 11.1587 16.8648 10.6131 18.2462L8.52331 23.5378C7.83691 25.2758 9.69713 26.9222 11.3388 26.0294L16.3578 23.4518M33.16 28L32.421 34.7954C32.2606 36.2718 31.2952 37.5378 29.9138 38.0832L24.6222 40.173C22.8842 40.8596 21.238 38.9992 22.1306 37.3576L24.9118 32.1754M40.4996 8.00003C42.4996 9.99999 41.1188 19.224 34.578 25.7648C31.9808 28.362 29.1608 30.346 26.4996 31.5894C21.8818 33.7472 23.3554 30.2286 20.8132 27.6864C18.2709 25.144 14.7524 26.618 16.9102 22C18.1536 19.3389 20.1376 16.5189 22.7348 13.9216C29.2756 7.38081 38.4996 6.00005 40.4996 8.00003ZM15.5508 38.1784C14.2219 39.5074 7.85059 41.066 7.85059 41.066C7.85059 41.066 9.40921 34.6946 10.7382 33.3658C12.0672 32.0368 14.2219 32.0368 15.5508 33.3658C16.8798 34.6946 16.8798 36.8494 15.5508 38.1784ZM34.4998 16C34.4998 17.1046 33.6044 18 32.4998 18C31.3954 18 30.4998 17.1046 30.4998 16C30.4998 14.8954 31.3954 14 32.4998 14C33.6044 14 34.4998 14.8954 34.4998 16Z" stroke="#1967D2" stroke-width="4" stroke-linecap="round"/>
-                                </svg>
-                            Безграничные</span>
-                            возможности Chrome
-                        </h2>
-                    </div>
-                    <div class="features__row">
-                        <div class="features__col">
-                            <div class="features__item features__item-md features__item-speed">
-                                <h3 class="features__item-title">Высокая скорость</h3>
-                                <div class="features__item-description">Наслаждайтесь молниеносной загрузкой страниц и плавным просмотром</div>
-                                <div class="features__item-icon-chrome">
-                                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
-                                        <g clip-path="url(#clip0_110_39279)">
-                                        <path d="M50.001 74.9988C63.8088 74.9988 75.002 63.8052 75.002 49.9973C75.002 36.1895 63.8088 24.9958 50.001 24.9958C36.1931 24.9958 25 36.1895 25 49.9973C25 63.8052 36.1931 74.9988 50.001 74.9988Z" fill="white"/>
-                                        <path d="M28.349 62.504L6.70077 25.008C2.31128 32.6085 0 41.2305 0 50.008C0 58.7854 2.31023 67.4074 6.6992 75.0079C11.0882 82.6084 17.401 88.9202 25.0026 93.307C32.6041 97.6939 41.2272 100.003 50.0041 99.9999L71.6523 62.504V62.4982C69.4597 66.3008 66.3043 69.4588 62.5038 71.6546C58.7033 73.8503 54.3916 75.0066 50.0025 75.0073C45.6133 75.0079 41.3013 73.8529 37.5002 71.6583C33.6991 69.4635 30.5429 66.3066 28.349 62.505V62.504Z" fill="#229342"/>
-                                        <path d="M71.6507 62.5023L50.003 99.9982C58.7799 99.9998 67.4024 97.6896 75.0035 93.3017C82.6045 88.9137 88.9163 82.6014 93.3042 74.9999C97.6919 67.3984 100.001 58.7758 99.9997 49.9989C99.9981 41.222 97.6858 32.6 93.2953 25H49.9993L49.9941 25.0037C54.3832 25.0016 58.6956 26.1552 62.4975 28.3486C66.2995 30.5423 69.4565 33.6976 71.6518 37.4987C73.8469 41.2996 75.0026 45.6115 75.0025 50.0008C75.0024 54.3901 73.846 58.7014 71.6507 62.5023Z" fill="#FBC116"/>
-                                        <path d="M50.0012 69.7955C60.9324 69.7955 69.7938 60.9341 69.7938 50.0024C69.7938 39.0707 60.9324 30.2098 50.0012 30.2098C39.07 30.2098 30.2086 39.0712 30.2086 50.0024C30.2086 60.9336 39.07 69.7955 50.0012 69.7955Z" fill="#1A73E8"/>
-                                        <path d="M50.0009 25.0015H93.2969C88.9095 17.4 82.5982 11.0871 74.9972 6.69815C67.3964 2.30948 58.7741 -0.000666181 49.9973 1.44102e-07C41.2204 0.000525077 32.5984 2.31182 24.9984 6.70184C17.3981 11.0916 11.087 17.4058 6.70077 25.008L28.349 62.504L28.3553 62.5064C26.1589 58.7062 25.0018 54.3947 25.0004 50.0054C24.999 45.6161 26.1534 41.3039 28.3475 37.5023C30.5411 33.7007 33.6981 30.5437 37.4991 28.3495C41.3002 26.1553 45.6125 24.9999 50.002 25.001L50.0009 25.0015Z" fill="#E33B2E"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_110_39279">
-                                        <rect width="99.9997" height="100" fill="white"/>
-                                        </clipPath>
-                                        </defs>
-                                        </svg>
-                                        
-                                </div>
-                            </div>
-                            <div class="features__item features__item-lg features__item-extensibility">
-                                <h3 class="features__item-title">Расширяемость</h3>
-                                <div class="features__item-description">Тысячи доступных расширений и приложений для повышения производительности</div>
-                                <img src="/src/image/IMG_extension.jpg" alt="" class="features__item-image">
-                            </div>
-                        </div>
-                        <div class="features__col">
-                            <div class="features__item features__item-lg features__item-integration">
-                                <h3 class="features__item-title">Интеграция с Google</h3>
-                                <div class="features__item-description">Синхронизируйте все свои устройства с помощью вашего Google аккаунта</div>
-                                <img src="/src/image/IMG_integration.jpg" alt="" class="features__item-image">
-                            </div>
-                            <div class="features__item features__item-md features__item-security">
-                                <h3 class="features__item-title">Максимальная безопасность</h3>
-                                <div class="features__item-description">Защитите свои данные с помощью встроенных средств защиты</div>
-                                <div class="features__item-icon-key">
-                                    <svg width="160" height="84" viewBox="0 0 160 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.895 84C66.033 84 84.79 65.196 84.79 42C84.79 18.804 66.033 0 42.895 0C19.757 0 1 18.804 1 42C1 65.196 19.757 84 42.895 84ZM42.895 61.8947C53.8551 61.8947 62.74 52.9876 62.74 42C62.74 31.0124 53.8551 22.1053 42.895 22.1053C31.9349 22.1053 23.05 31.0124 23.05 42C23.05 52.9876 31.9349 61.8947 42.895 61.8947Z" fill="#1967D2"/>
-                                        <mask id="mask0_113_10937" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="55" y="30" width="106" height="42">
-                                        <rect x="55" y="30" width="106" height="42" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_113_10937)">
-                                        <path class="keys keys-2" d="M84 31H120V57H84V31Z" fill="#FBC010"/>
-                                        <path class="keys keys-3" d="M120 31H160V57H120V31Z" fill="#1B7D3A"/>
-                                        <path class="keys keys-1" d="M67 31H87V57H67V31Z" fill="#D94B39"/>
-                                        <path class="keys keys-1" d="M59.4391 31C61.5284 34.1508 62.7458 37.9328 62.7458 41.9999C62.7458 47.985 60.1095 53.3528 55.9375 57H82.0449C83.8221 52.3416 84.7958 47.2847 84.7958 41.9999C84.7958 38.1938 84.2908 34.5059 83.3443 31H59.4391Z" fill="#D94B39"/>
-                                        <rect class="keys keys-4" x="120" y="57" width="13" height="14" fill="#1B7D3A"/>
-                                        <rect class="keys keys-4" x="147" y="57" width="13" height="14" fill="#1B7D3A"/>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="installation">
-                <div class="installation__row">
-                    <div class="installation__col installation__col-slider">
-                        <div class="installation__slider">
-                            <div class="installation__slide active"><img src="/src/image/installation/slide-1.png" alt="" class="installation__image"></div>
-                            <div class="installation__slide"><img src="/src/image/installation/slide-2.png" alt="" class="installation__image"></div>
-                            <div class="installation__slide"><img src="/src/image/installation/slide-3.png" alt="" class="installation__image"></div>
-                            <div class="installation__slide"><img src="/src/image/installation/slide-4.png" alt="" class="installation__image"></div>
-                        </div>
-                    </div>
-                    <div class="installation__col">
-                        <div class="installation__wrapper">
-                            <div class="installation__tabs">
-                                <div class="installation__tab active">
-                                    <div class="installation__bar">
-                                        <div class="installation__bar-fill"></div>
-                                    </div>
-                                    <div class="installation__content">
-                                        <div class="installation__title">
-                                            Установка
-                                        </div>
-                                        <div class="installation__description" style="display: block;">
-                                            Простая установка и автоматические обновления для вашей безопасности
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="installation__tab">
-                                    <div class="installation__bar">
-                                        <div class="installation__bar-fill"></div>
-                                    </div>
-                                    <div class="installation__content">
-                                        <div class="installation__title">
-                                            Оптимизация
-                                        </div>
-                                        <div class="installation__description">
-                                            Оптимизирован для работы на любом устройстве и операционной системе
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="installation__tab">
-                                    <div class="installation__bar">
-                                        <div class="installation__bar-fill"></div>
-                                    </div>
-                                    <div class="installation__content">
-                                        <div class="installation__title">
-                                            Интерфейс
-                                        </div>
-                                        <div class="installation__description">
-                                            Интуитивно понятный и настраиваемый интерфейс для вашего удобства
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="installation__tab">
-                                    <div class="installation__bar">
-                                        <div class="installation__bar-fill"></div>
-                                    </div>
-                                    <div class="installation__content">
-                                        <div class="installation__title">
-                                            Поддержка
-                                        </div>
-                                        <div class="installation__description">
-                                            Круглосуточная поддержка и обширная база знаний
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="installation__cta btn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19.9643 8.23077C21.4634 8.23077 22 9.51235 22 10.5556V18.1111C22 19.1543 20.7848 20 19.2857 20H5.71429C4.21523 20 3 19.1543 3 18.1111V10.5556C3 9.51235 3.53665 8.23077 5.03571 8.23077M12.5 3V15.4231M12.5 15.4231L8.42857 11.6288M12.5 15.4231L16.5714 11.6288" stroke="white" stroke-width="1.75" stroke-linecap="round"/> 
-                                </svg>
-                            Скачать для Windows</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="faq">
-                <div class="faq__wrapper">
-                    <div class="faq__header">
-                        <h2 class="faq__title">
-                            Часто задаваемые 
-                            <span class="faq__title-marker">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M31.232 9.77584L32.6462 8.36162L32.6257 8.34113L32.6047 8.32125L31.232 9.77584ZM38.2246 16.7683L39.6388 15.3541L39.6388 15.3541L38.2246 16.7683ZM22.0413 17.1354L20.7152 18.6326L23.7095 21.2848L25.0356 19.7877L22.0413 17.1354ZM27.2308 6L28.6034 4.54541L25.8313 7.42879L27.2308 6ZM27.8366 22.4311L26.2677 23.6714L28.7483 26.8093L30.3172 25.5689L27.8366 22.4311ZM40.3852 21.7574L41.7994 23.1717L44.6278 20.3433L43.2136 18.9291L40.3852 21.7574ZM17.7577 33.071C18.5388 32.29 18.5388 31.0237 17.7577 30.2426C16.9767 29.4616 15.7103 29.4616 14.9293 30.2426L17.7577 33.071ZM7.85823 37.3138L6.44403 38.7281L9.27249 41.5565L10.6867 40.1422L7.85823 37.3138ZM29.8178 11.1901L36.8104 18.1826L39.6388 15.3541L32.6462 8.36162L29.8178 11.1901ZM29.7349 8.44972L22.0413 17.1354L25.0356 19.7877L32.7291 11.102L29.7349 8.44972ZM32.6047 8.32125L28.6034 4.54541L25.8581 7.45459L29.8594 11.2304L32.6047 8.32125ZM25.8313 7.42879L36.8251 18.1971L39.6241 15.3396L28.6303 4.57121L25.8313 7.42879ZM36.9843 15.1994L27.8366 22.4311L30.3172 25.5689L39.4649 18.3373L36.9843 15.1994ZM36.8104 18.1825L40.3852 21.7574L43.2136 18.9291L39.6388 15.3541L36.8104 18.1825ZM14.9293 30.2426L7.85823 37.3138L10.6867 40.1422L17.7577 33.071L14.9293 30.2426Z" fill="#D56E0C"/>
-                                    <path d="M8.62349 20.6121C7.54137 21.1807 7.32033 22.6353 8.18469 23.4997L24.5002 39.8151C25.3646 40.6795 26.819 40.4585 27.3876 39.3763C29.6034 35.1591 28.818 29.9909 25.4496 26.6223L21.3776 22.5503C18.0089 19.1817 12.8407 18.3963 8.62349 20.6121Z" fill="#D56E0C" stroke="#D56E0C" stroke-width="4" stroke-linecap="round"/>
-                                </svg>                                    
-                            вопросы</span>
-                        </h2>
-                    </div>
-                    <div class="faq__accordion">
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Как сделать Chrome браузером по умолчанию?</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg>                                    
-                            </div>
-                            <div class="faq__accordion-text">
-                                Чтобы сделать Google Chrome браузером по умолчанию: Откройте Chrome, нажмите на три точки в правом верхнем углу, выберите «Настройки», затем «Приложения», найдите «Браузер», нажмите на «Браузер по умолчанию» и выберите «Google Chrome» из списка установленных браузеров.
-                            </div>
-                        </div>
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Как проверить версию Chrome?</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg> 
-                            </div>
-                            <div class="faq__accordion-text">
-                                Чтобы проверить версию Chrome, откройте браузер, нажмите на три точки в правом верхнем углу окна (меню), выберите раздел «Справка» и далее «О Google Chrome». В этом разделе вы увидите текущую версию браузера.
-                            </div>
-                        </div>
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Как обновить Chrome до последней версии?</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg> 
-                            </div>
-                            <div class="faq__accordion-text">
-                                Chrome автоматически проверяет наличие обновлений. Чтобы убедиться, что вы используете последнюю версию, просто перезапустите браузер. Если обновление доступно, оно будет загружено и установлено автоматически.
-                            </div>
-                        </div>
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Как включить режим инкогнито? </span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="faq__accordion-text">
-                                Для включения режима инкогнито в Chrome откройте браузер, нажмите на три точки в правом верхнем углу окна (меню) и выберите «Новое окно инкогнито». В этом режиме браузер не сохраняет историю просмотра, данные ввода и файлы cookie.
-                            </div>
-                        </div>
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Как очистить историю и данные браузера?</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="faq__accordion-text">
-                                Чтобы очистить историю и данные браузера в Chrome, откройте браузер, нажмите на три точки в правом верхнем углу окна (меню), выберите «История», затем «Очистить данные браузера». Выберите период и тип данных, которые вы хотите удалить, и нажмите «Очистить данные».
-                            </div>
-                        </div>
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Как активировать защиту от фишинга?</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="faq__accordion-text">
-                                Защита от фишинга в Google Chrome включена по умолчанию. Она автоматически предупреждает вас о подозрительных сайтах, предотвращая переход на вредоносные страницы. Вы можете проверить настройки защиты от фишинга в разделе «Настройки» браузера.
-                            </div>
-                        </div>
-                        <div class="faq__accordion-item">
-                            <div class="faq__accordion-title">
-                                <span>Какие расширения для безопасности можно установить в Chrome?</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 9L12 15L5 9" stroke="#1967D2" stroke-width="3" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="faq__accordion-text">
-                                Google Chrome предлагает широкий выбор расширений для усиления безопасности. Вы можете установить антивирусные программы, блокировщики рекламы, менеджеры паролей и другие инструменты для защиты данных и повышения безопасности в интернете.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer__row">
-                    <div class="footer__col footer__col-logo">
-                        <svg width="133" height="36" viewBox="0 0 133 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.973 27C14.6897 27 11.8183 25.2367 10.2503 22.6037L2.40766 9.00002L2.40622 8.99785L2.40479 9.00002C0.875644 11.6474 0 14.7211 0 18C0 27.941 8.04686 36 17.973 36L25.6956 22.6037C24.1277 25.2367 21.2563 27 17.973 27Z" fill="url(#paint0_linear_4075_5038)"/>
-                            <path d="M33.5418 9.00027H17.9736C22.937 9.00027 26.9601 13.0294 26.9601 18.0003C26.9601 19.593 26.5467 21.0883 25.8221 22.3866C25.7811 22.46 25.7387 22.5317 25.6956 22.6037L17.973 36C27.8991 36 35.9466 27.9413 35.9466 18.0003C35.9466 14.7214 35.071 11.6478 33.5418 9.00027Z" fill="url(#paint1_linear_4075_5038)"/>
-                            <path d="M33.5387 9.00002C30.4302 3.62088 24.6249 0 17.9735 0C11.322 0 5.51484 3.61872 2.40622 8.99785L5.84391 15.0498L10.125 22.3862C9.40035 21.0881 8.98694 19.5926 8.98694 18C8.98694 13.0291 13.0102 9.00027 17.9736 9.00027L33.5387 9.00002Z" fill="url(#paint2_linear_4075_5038)"/>
-                            <path d="M26.959 18.0003C26.959 13.0294 22.9359 9.00027 17.9725 9.00027C13.0091 9.00027 8.98694 13.0291 8.98694 18C8.98694 19.5926 9.40035 21.0881 10.125 22.3862L10.2503 22.6037C11.8183 25.2367 14.6897 27 17.973 27C21.2563 27 24.1277 25.2367 25.6956 22.6037L25.8209 22.3866C26.5456 21.0883 26.959 19.593 26.959 18.0003Z" fill="white"/>
-                            <path d="M25.3414 18.0002C25.3414 13.9243 22.0422 10.6202 17.9725 10.6202C13.9026 10.6202 10.6035 13.9243 10.6035 18.0002C10.6035 19.3064 10.9428 20.5325 11.5366 21.5966L11.6395 21.7752C12.9257 23.9338 15.2801 25.3802 17.9725 25.3802C20.6648 25.3802 23.0193 23.9338 24.3054 21.7752L24.4082 21.5966C25.002 20.5325 25.3414 19.3064 25.3414 18.0002Z" fill="#1A73E8"/>
-                            <path d="M50.0156 25.4297C49.4541 25.4297 48.9062 25.3029 48.4008 25.0639C47.8955 24.8249 47.4461 24.4873 47.0809 24.0653C46.2664 23.1091 45.8171 21.8714 45.8171 20.6057C45.8171 19.34 46.2664 18.1167 47.0809 17.1461C47.4461 16.7242 47.8955 16.3865 48.4008 16.1475C48.9062 15.9085 49.4541 15.7817 50.0156 15.7817C50.83 15.7392 51.6302 15.9646 52.3045 16.4145C52.9789 16.8646 53.4843 17.5256 53.751 18.2989L56.0537 17.3427C55.6044 16.2461 54.846 15.2892 53.8912 14.5865C52.7963 13.8269 51.4901 13.4331 50.1701 13.49C49.2434 13.4619 48.3303 13.6303 47.4741 13.9824C46.6179 14.3338 45.8451 14.868 45.2131 15.529C44.5675 16.2036 44.0758 17.0057 43.7386 17.8776C43.4015 18.7495 43.2469 19.6921 43.2749 20.6201C43.2469 21.5626 43.4015 22.4906 43.7386 23.3626C44.0615 24.2345 44.5669 25.0359 45.2131 25.7112C45.8587 26.3859 46.6172 26.9064 47.4741 27.2578C48.3303 27.6092 49.2434 27.7783 50.1701 27.7503C51.5037 27.7928 52.8237 27.3989 53.9329 26.6112C54.9157 25.9222 55.6741 24.966 56.1371 23.8687L53.9049 22.9125C53.1888 24.5858 51.8976 25.4297 50.0156 25.4297Z" fill="#5F6368"/>
-                            <path d="M64.972 13.4759C64.0876 13.4759 63.2178 13.715 62.46 14.1512C61.7583 14.517 61.1552 15.0793 60.7482 15.7691H60.6361L60.7482 13.9122V7.77637H58.2321V27.2884H60.7482V19.8918C60.7339 18.837 61.0848 17.8247 61.7304 17.0089C62.0251 16.615 62.4032 16.2918 62.8526 16.0809C63.3012 15.8562 63.7922 15.7575 64.2832 15.7713C66.4853 15.7713 67.5787 17.0089 67.5787 19.4835V27.2884H70.0949V19.1019C70.0949 17.3862 69.6456 16.0218 68.7757 15.0087C67.8908 13.9821 66.6283 13.4759 64.972 13.4759Z" fill="#5F6368"/>
-                            <path d="M79.5241 13.5976C78.7088 13.6256 77.9216 13.8783 77.2328 14.3283C76.5017 14.7222 75.9539 15.3543 75.6584 16.1276H75.5585V13.9676H73.1141V27.2876H75.6304L75.6584 19.9645C75.6304 19.4447 75.7145 18.9385 75.8971 18.4467C76.0797 17.955 76.3608 17.5194 76.7123 17.1399C77.0215 16.8022 77.3875 16.5359 77.8087 16.3529C78.2163 16.1701 78.6801 16.0722 79.1301 16.0722C79.5801 16.0578 80.0294 16.1284 80.4514 16.2687L81.4076 13.9216C80.8173 13.6961 80.1711 13.5839 79.5241 13.5976Z" fill="#5F6368"/>
-                            <path d="M94.5679 17.878C94.2448 17.006 93.7397 16.2047 93.0936 15.5293C91.7879 14.2218 90.0046 13.4903 88.1513 13.4903C86.2979 13.4903 84.5281 14.2218 83.2084 15.5293C82.5628 16.2183 82.0567 17.006 81.7339 17.878C81.3967 18.7499 81.2421 19.6923 81.2702 20.6204C81.2421 21.5629 81.3967 22.491 81.7339 23.3629C82.0567 24.2348 82.5621 25.0361 83.2084 25.7116C84.5139 27.019 86.2979 27.7505 88.1513 27.7505C90.0046 27.7505 91.7737 27.019 93.0936 25.7116C93.7255 25.0369 94.2306 24.2348 94.5679 23.3629C94.9052 22.491 95.0596 21.5485 95.0321 20.6204C95.0596 19.6779 94.9052 18.7499 94.5679 17.878ZM92.237 22.5039C92.0133 23.1087 91.676 23.6711 91.2269 24.1354C90.8336 24.5574 90.3561 24.895 89.8226 25.1197C89.3025 25.3587 88.7273 25.4711 88.1513 25.4711C87.5761 25.4711 87.0142 25.3443 86.4808 25.1197C85.9473 24.8806 85.4698 24.5574 85.0765 24.1354C84.6274 23.6573 84.2901 23.1087 84.0664 22.5039C83.8418 21.8991 83.7433 21.2526 83.7717 20.6053C83.7433 19.9588 83.8418 19.3115 84.0664 18.7066C84.2901 18.1019 84.6416 17.5395 85.0765 17.0751C85.4698 16.6533 85.9473 16.3156 86.4808 16.0909C87.0009 15.8519 87.5761 15.7396 88.1513 15.7396C88.7273 15.7396 89.2892 15.8662 89.8226 16.0909C90.3561 16.3299 90.8336 16.6533 91.2269 17.0751C91.676 17.5532 92.0133 18.1019 92.237 18.7066C92.4624 19.3115 92.5601 19.958 92.5317 20.6053C92.5609 21.2526 92.4624 21.8999 92.237 22.5039Z" fill="#5F6368"/>
-                            <path d="M112.844 13.4583C111.918 13.4303 110.993 13.6556 110.165 14.1063C109.351 14.557 108.664 15.2331 108.188 16.0359C107.43 14.3317 106.027 13.4727 103.951 13.4727C103.123 13.4871 102.323 13.7262 101.608 14.1488C100.878 14.5153 100.275 15.0783 99.84 15.7681H99.7131V13.8961H97.3413V27.288H99.8575V19.8915C99.8425 18.8511 100.181 17.8381 100.828 17.0231C101.109 16.6292 101.475 16.3196 101.897 16.0949C102.319 15.884 102.797 15.7717 103.275 15.7717C103.683 15.7292 104.091 15.7998 104.484 15.9401C104.878 16.0949 105.216 16.3196 105.511 16.6148C106.004 17.1771 106.257 18.1332 106.257 19.4833V27.288H108.701V19.8915C108.686 18.8511 109.037 17.8381 109.671 17.0231C109.952 16.6292 110.318 16.3196 110.741 16.0949C111.162 15.884 111.64 15.7717 112.118 15.7717C112.54 15.7292 112.948 15.7998 113.342 15.9401C113.722 16.0949 114.073 16.3196 114.369 16.6148C114.861 17.1771 115.1 18.1332 115.1 19.4833V27.288H117.616V19.0916C117.63 17.3593 117.223 15.9934 116.423 14.9796C115.623 13.9652 114.43 13.4583 112.844 13.4583Z" fill="#5F6368"/>
-                            <path d="M129.039 13.9521C128.211 13.6144 127.326 13.4595 126.442 13.5021C125.558 13.4876 124.659 13.6568 123.845 14.0226C123.03 14.3883 122.301 14.937 121.725 15.6116C120.503 17.0041 119.844 18.7897 119.885 20.6322C119.814 22.5164 120.502 24.3589 121.781 25.737C122.412 26.4116 123.171 26.9322 124.027 27.2836C124.87 27.6349 125.797 27.7897 126.709 27.7616C128.029 27.8041 129.307 27.4383 130.388 26.7068C131.343 26.0603 132.087 25.1458 132.536 24.0911L130.303 23.163C129.658 24.6959 128.45 25.4555 126.638 25.4555C126.105 25.4698 125.572 25.3568 125.066 25.1602C124.575 24.9637 124.111 24.6678 123.732 24.2883C122.877 23.4445 122.399 22.2918 122.385 21.0959H132.972L133 20.6315C133 18.4657 132.41 16.7363 131.217 15.4424C130.598 14.7959 129.868 14.2897 129.039 13.9521ZM122.567 19.0079C122.777 18.0934 123.269 17.2784 123.97 16.6593C124.645 16.0688 125.501 15.7592 126.386 15.7737C127.663 15.7737 128.618 16.125 129.264 16.814C129.868 17.3908 130.233 18.1785 130.318 19.0079H122.567Z" fill="#5F6368"/>
-                            <defs>
-                            <linearGradient id="paint0_linear_4075_5038" x1="103.275" y1="34.8439" x2="96.2428" y2="-12.3802" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#1E8E3E"/>
-                            <stop offset="1" stop-color="#34A853"/>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_4075_5038" x1="-19.8266" y1="36.4042" x2="-14.8525" y2="-11.3605" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FCC934"/>
-                            <stop offset="1" stop-color="#FBBC04"/>
-                            </linearGradient>
-                            <linearGradient id="paint2_linear_4075_5038" x1="-0.0456877" y1="18.2322" x2="133.058" y2="18.2322" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#D93025"/>
-                            <stop offset="1" stop-color="#EA4335"/>
-                            </linearGradient>
-                            </defs>
-                        </svg>
-                        <div class="footer__social">
-                            <a href="#"><img src="/src/image/yb.svg" alt=""></a>
-                            <a href="#"><img src="/src/image/fb.svg" alt=""></a>
-                            <a href="#"><img src="/src/image/tw.svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="footer__col">
-                        <div class="footer__nav">
-                            <ul>
-                                <li>Браузер</li>
-                                <li>Функции</li>
-                                <li>Преимущества</li>
-                                <li>Вопросы</li>
-                            </ul>
-                            <ul>
-                                <li>Поддержка</li>
-                                <li>О нас</li>
-                                <li>Условия использования</li>
-                                <li>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.67709 5.5L9.34611 11.3874M9.34611 11.3874L3.67709 18.5M9.34611 11.3874L10.6354 12.7263C11.4038 13.4435 12.5963 13.4435 13.3647 12.7263L14.72 11.3874M20.5 5.67709L14.72 11.3874M14.72 11.3874L20.5 18.3229M3.67709 18.5C4.02965 18.8112 4.49278 19 5 19H19C19.5973 19 20.1335 18.7381 20.5 18.3229M3.67709 18.5C3.26188 18.1335 3 17.5973 3 17V7C3 5.89543 3.89543 5 5 5H19C20.1046 5 21 5.89543 21 7V17C21 17.5072 20.8112 17.9703 20.5 18.3229" stroke="#5F6368" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                    E-mail</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__row footer__bottom">
-                    <div class="footer__copyright">
-                        Все товарные знаки являются собственностью их правообладателей
-                    </div>
-                    <div class="footer__pp">
-                        <a href="#">Политика конфиденциальности</a>
-                    </div>
-                    <div class="footer__op">
-                        <a href="https://www.google.com/intl/ru/chrome/">Официальная страница для скачивания Google Chrome</a>
-                    </div>                    
-                </div>
-            </div>
-        </footer>
-        <div class="modal">
-            <div class="modal__menu">
-                <div class="modal__header">
-                    <div class="header__lockup">
-                        <div class="header__logo">
-                            <svg viewBox="0 0 116 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_4011_587)">
-                                <path d="M15.5676 23.4C12.7237 23.4 10.2366 21.8718 8.87846 19.5899L2.08543 7.80002L2.08419 7.79813L2.08294 7.80002C0.758453 10.0945 0 12.7583 0 15.6C0 24.2155 6.96991 31.2 15.5676 31.2L22.2567 19.5899C20.8986 21.8718 18.4115 23.4 15.5676 23.4Z" fill="url(#paint0_linear_4011_587)"/>
-                                <path d="M29.0528 7.80024H15.5681C19.8673 7.80024 23.3519 11.2922 23.3519 15.6003C23.3519 16.9806 22.9939 18.2766 22.3662 19.4017C22.3307 19.4653 22.294 19.5275 22.2567 19.5899L15.5676 31.2C24.1652 31.2 31.1357 24.2158 31.1357 15.6003C31.1357 12.7586 30.3773 10.0947 29.0528 7.80024Z" fill="url(#paint1_linear_4011_587)"/>
-                                <path d="M29.0501 7.80002C26.3576 3.13809 21.3293 0 15.568 0C9.80673 0 4.77676 3.13622 2.08419 7.79813L5.0618 13.0431L8.76993 19.4014C8.14226 18.2763 7.78418 16.9803 7.78418 15.6C7.78418 11.2919 11.269 7.80024 15.5681 7.80024L29.0501 7.80002Z" fill="url(#paint2_linear_4011_587)"/>
-                                <path d="M23.3509 15.6003C23.3509 11.2922 19.8663 7.80024 15.5671 7.80024C11.268 7.80024 7.78338 11.2922 7.78338 15.6003C7.78338 16.9806 8.14139 18.2766 8.76913 19.4017L8.87846 19.5899C10.2366 21.8718 12.7237 23.4 15.5676 23.4C18.4115 23.4 20.8986 21.8718 22.2567 19.5899L22.3652 19.4017C22.9929 18.2766 23.3509 16.9806 23.3509 15.6003Z" fill="white"/>
-                                <path d="M21.9498 15.6002C21.9498 12.0677 19.0922 9.20418 15.5671 9.20418C12.0419 9.20418 9.18441 12.0677 9.18441 15.6002C9.18441 16.7322 9.47829 17.7948 9.99264 18.7171L10.0817 18.8718C11.1958 20.7426 13.2351 21.9962 15.5671 21.9962C17.8991 21.9962 19.9385 20.7426 21.0525 18.8718L21.1415 18.7171C21.6559 17.7948 21.9498 16.7322 21.9498 15.6002Z" fill="#1A73E8"/>
-                                <path d="M43.3218 22.0391C42.8354 22.0391 42.3609 21.9292 41.9231 21.7221C41.4854 21.5149 41.0962 21.2223 40.7799 20.8566C40.0743 20.0279 39.6851 18.9552 39.6851 17.8583C39.6851 16.7613 40.0743 15.7011 40.7799 14.86C41.0962 14.4943 41.4854 14.2017 41.9231 13.9945C42.3609 13.7873 42.8354 13.6775 43.3218 13.6775C44.0272 13.6407 44.7203 13.8359 45.3044 14.2259C45.8885 14.616 46.3263 15.1888 46.5573 15.859L48.5518 15.0303C48.1626 14.0799 47.5057 13.2507 46.6787 12.6416C45.7303 11.9833 44.5989 11.642 43.4556 11.6913C42.6529 11.6669 41.8621 11.813 41.1204 12.1181C40.3788 12.4227 39.7094 12.8856 39.162 13.4584C38.6029 14.0431 38.1769 14.7382 37.8849 15.494C37.5929 16.2496 37.459 17.0664 37.4833 17.8708C37.459 18.6876 37.5929 19.4919 37.8849 20.2476C38.1645 21.0032 38.6023 21.6978 39.162 22.2831C39.7212 22.8677 40.3782 23.3189 41.1204 23.6234C41.8621 23.9279 42.6529 24.0745 43.4556 24.0503C44.6107 24.0871 45.754 23.7457 46.7148 23.063C47.5661 22.4659 48.223 21.6372 48.6241 20.6862L46.6905 19.8575C46.0703 21.3077 44.9519 22.0391 43.3218 22.0391Z" fill="#5F6368"/>
-                                <path d="M56.2765 11.6791C55.5105 11.6791 54.7571 11.8863 54.1007 12.2644C53.4929 12.5814 52.9706 13.0687 52.618 13.6665H52.5209L52.618 12.0572V6.73952H50.4386V23.6499H52.618V17.2396C52.6056 16.3254 52.9095 15.4481 53.4687 14.7411C53.724 14.3997 54.0515 14.1196 54.4407 13.9367C54.8293 13.742 55.2546 13.6565 55.6799 13.6684C57.5873 13.6684 58.5343 14.7411 58.5343 16.8857V23.6499H60.7138V16.555C60.7138 15.068 60.3246 13.8856 59.5711 13.0076C58.8046 12.1178 57.7111 11.6791 56.2765 11.6791Z" fill="#5F6368"/>
-                                <path d="M68.881 11.7846C68.1748 11.8088 67.493 12.0279 66.8964 12.4179C66.2631 12.7592 65.7886 13.3071 65.5327 13.9773H65.4461V12.1053H63.3289V23.6493H65.5084L65.5327 17.3025C65.5084 16.852 65.5813 16.4133 65.7394 15.9871C65.8976 15.561 66.1411 15.1835 66.4456 14.8546C66.7133 14.5619 67.0303 14.3311 67.3952 14.1725C67.7483 14.0141 68.1499 13.9292 68.5398 13.9292C68.9295 13.9167 69.3187 13.9779 69.6842 14.0996L70.5124 12.0653C70.0012 11.87 69.4414 11.7727 68.881 11.7846Z" fill="#5F6368"/>
-                                <path d="M81.9115 15.4942C81.6316 14.7385 81.1941 14.0441 80.6344 13.4587C79.5035 12.3256 77.9589 11.6916 76.3536 11.6916C74.7483 11.6916 73.2153 12.3256 72.0723 13.4587C71.5131 14.0559 71.0746 14.7385 70.7951 15.4942C70.503 16.2499 70.3691 17.0667 70.3934 17.871C70.3691 18.6879 70.503 19.4922 70.7951 20.2478C71.0746 21.0035 71.5124 21.698 72.0723 22.2833C73.203 23.4165 74.7483 24.0505 76.3536 24.0505C77.9589 24.0505 79.4912 23.4165 80.6344 22.2833C81.1818 21.6986 81.6193 21.0035 81.9115 20.2478C82.2036 19.4922 82.3374 18.6754 82.3135 17.871C82.3374 17.0542 82.2036 16.2499 81.9115 15.4942ZM79.8925 19.5034C79.6987 20.0275 79.4066 20.5149 79.0175 20.9174C78.677 21.2831 78.2633 21.5757 77.8013 21.7704C77.3508 21.9776 76.8525 22.0749 76.3536 22.0749C75.8554 22.0749 75.3687 21.9651 74.9066 21.7704C74.4446 21.5632 74.031 21.2831 73.6904 20.9174C73.3013 20.503 73.0092 20.0275 72.8154 19.5034C72.6209 18.9792 72.5356 18.4189 72.5601 17.8579C72.5356 17.2976 72.6209 16.7366 72.8154 16.2124C73.0092 15.6883 73.3136 15.2009 73.6904 14.7985C74.031 14.4328 74.4446 14.1401 74.9066 13.9454C75.3571 13.7383 75.8554 13.641 76.3536 13.641C76.8525 13.641 77.3392 13.7507 77.8013 13.9454C78.2633 14.1526 78.677 14.4328 79.0175 14.7985C79.4066 15.2128 79.6987 15.6883 79.8925 16.2124C80.0878 16.7366 80.1724 17.2969 80.1478 17.8579C80.1731 18.4189 80.0878 18.9799 79.8925 19.5034Z" fill="#5F6368"/>
-                                <path d="M97.7419 11.6638C96.9399 11.6396 96.138 11.8348 95.4214 12.2255C94.7163 12.6161 94.1212 13.2021 93.7083 13.8978C93.0517 12.4208 91.8369 11.6764 90.0385 11.6764C89.3219 11.6888 88.6285 11.896 88.0095 12.2623C87.3767 12.5799 86.8547 13.0679 86.4779 13.6657H86.368V12.0432H84.3136V23.6496H86.4931V17.2393C86.4801 16.3376 86.7729 15.4597 87.3334 14.7533C87.577 14.412 87.8938 14.1436 88.2597 13.9489C88.6248 13.7661 89.0392 13.6688 89.4535 13.6688C89.8064 13.632 90.16 13.6931 90.5006 13.8148C90.8419 13.9489 91.134 14.1436 91.39 14.3995C91.8167 14.8868 92.0358 15.7155 92.0358 16.8855V23.6496H94.153V17.2393C94.14 16.3376 94.4445 15.4597 94.9933 14.7533C95.237 14.412 95.5537 14.1436 95.9196 13.9489C96.2848 13.7661 96.6991 13.6688 97.1128 13.6688C97.4786 13.632 97.8315 13.6931 98.1728 13.8148C98.5019 13.9489 98.8063 14.1436 99.0623 14.3995C99.4889 14.8868 99.6957 15.7155 99.6957 16.8855V23.6496H101.875V16.546C101.887 15.0447 101.535 13.8609 100.842 12.9823C100.148 12.1032 99.1151 11.6638 97.7419 11.6638Z" fill="#5F6368"/>
-                                <path d="M111.77 12.0918C111.052 11.7991 110.286 11.6649 109.52 11.7018C108.754 11.6893 107.975 11.8359 107.27 12.153C106.565 12.4699 105.933 12.9454 105.434 13.5301C104.376 14.7369 103.804 16.2844 103.841 17.8812C103.779 19.5142 104.375 21.1111 105.482 22.3054C106.029 22.8901 106.687 23.3412 107.428 23.6458C108.158 23.9503 108.961 24.0844 109.751 24.06C110.895 24.0969 112.001 23.7799 112.937 23.1459C113.765 22.5856 114.409 21.7931 114.798 20.879L112.864 20.0746C112.305 21.4031 111.259 22.0614 109.69 22.0614C109.228 22.0739 108.766 21.9759 108.328 21.8055C107.902 21.6352 107.501 21.3787 107.173 21.0499C106.432 20.3185 106.018 19.3196 106.006 18.2831H115.175L115.2 17.8806C115.2 16.0036 114.689 14.5048 113.655 13.3834C113.12 12.8231 112.488 12.3844 111.77 12.0918ZM106.163 16.4735C106.345 15.681 106.771 14.9746 107.379 14.438C107.963 13.9263 108.705 13.658 109.471 13.6705C110.577 13.6705 111.404 13.975 111.964 14.5722C112.487 15.072 112.804 15.7547 112.877 16.4735H106.163Z" fill="#5F6368"/>
-                                </g>
-                                <defs>
-                                <linearGradient id="paint0_linear_4011_587" x1="89.4535" y1="30.1981" x2="83.3553" y2="-10.7284" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#1E8E3E"/>
-                                <stop offset="1" stop-color="#34A853"/>
-                                </linearGradient>
-                                <linearGradient id="paint1_linear_4011_587" x1="-17.1731" y1="31.5503" x2="-12.8598" y2="-9.84521" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FCC934"/>
-                                <stop offset="1" stop-color="#FBBC04"/>
-                                </linearGradient>
-                                <linearGradient id="paint2_linear_4011_587" x1="-0.0395731" y1="15.8012" x2="115.251" y2="15.8012" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#D93025"/>
-                                <stop offset="1" stop-color="#EA4335"/>
-                                </linearGradient>
-                                <clipPath id="clip0_4011_587">
-                                <rect width="116" height="32" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            <div class="modal__menu-close">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 30L30 10M30 30L10 10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                                </svg>                                    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal__nav">
-                    <div class="header__nav">
-                        <ul class="header__nav-list" role="menu" aria-label="Navigation drawer">
-                            <li class="header__nav-li selected-link " role="menuitem">
-                                <a href="#" class="header__nav-li-link">Функции</a>
-                            </li>
-                            <li class="header__nav-li selected-link " role="menuitem">
-                                <a href="#" class="header__nav-li-link">Преимущества</a>
-                            </li>
-                            <li class="header__nav-li selected-link " role="menuitem">
-                                <a href="#" class="header__nav-li-link">Поддержка</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="modal__footer">
-                    <div class="header__cta">
-                        <a href="" class="header__btn btn">Скачать Chrome</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
 
-        <script src="src/js/gsap.min.js" async defer></script>
-        <script src="src/js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-        <script src="src/js/all.min.js" async defer></script>
-        
+    <script src="src/js/gsap.min.js" async defer></script>
+    <script src="src/js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="src/js/all.min.js" async defer></script>
 
-    </body>
+
+</body>
+
 </html>
