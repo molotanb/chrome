@@ -1,0 +1,348 @@
+.hero {
+    //margin-top: 56px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+
+    &__overlay {
+        position: absolute;
+        width: 360px;
+        top: -63px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        z-index: -1;
+        &-img {
+            display: none;
+            &-sm {
+                display: block;
+            }
+        }
+    }
+    &__wrapper {
+        @include container;
+        @include flex-center;
+        justify-content: start;
+        //padding: 12px 0;
+        padding-top: 42px;
+        padding-bottom: 452px;
+        overflow: hidden;
+    }
+
+    &__content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+        margin-bottom: 16px;
+
+        & svg {
+            width: 36px;
+            height: 36px;
+            margin-bottom: -8px;
+            margin-right: 3px;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        color: $dark-grey;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 28px;
+    }
+
+    &__cta {
+        width: 100%;
+        @include btn-cta;
+    }
+
+    &__image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__slider {
+        width: 556px;
+        position: absolute;
+        top: 382px;
+        left: calc(50% - 164px);
+
+        &-content {
+            position: relative;
+        }
+        &-header {
+            margin-bottom: -2px;
+        }
+        &-slides {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 12px 12px;
+            height: 257px;
+
+            img {
+                margin-bottom: -2px;
+            }
+        }
+        &-slide {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+        &-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &-pagination {
+            position: absolute;
+            bottom: 52px;
+            left: 25px;
+
+            &-bar {
+                background: rgba(255, 255, 255, 0.35);
+                width: 20px;
+                height: 2px;
+                margin-bottom: 8px;
+                transition: .3s;
+                border-radius: 50px;
+                &.active {
+                    width: 40px;
+                }
+            }
+            &-fill {
+                background: #fff;
+                width: 0;
+                height: 2px;
+                border-radius: 50px;
+                transition: .3s;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 18px 0;
+        padding-bottom: 484px;
+        overflow: hidden;
+        margin-bottom: 104px;
+        margin-top: 61px;
+        &__wrapper {
+            padding-bottom: 65px;
+        }
+        &__title {
+            max-width: 444px;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 29px;
+            & svg {
+                width: 40px;
+                height: 40px;
+                margin-bottom: -8px;
+                margin-right: 3px;
+            }
+        }
+        &__content {
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        &__subtitle {
+            max-width: 326px;
+            color: $dark-grey;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 40px;
+        }
+        &__overlay {
+            width: 768px;
+            top: -64px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            &-img {
+                display: none;
+                &-md {
+                    display: block;
+                }
+            }
+        }
+        &__slider {
+            width: 952px;
+            position: absolute;
+            top: 413px;
+            left: calc(50% - 340px);
+    
+            &-content {
+                position: relative;
+            }
+            &-header {
+                margin-bottom: -2px;
+            }
+            &-slides {
+                position: relative;
+                overflow: hidden;
+                border-radius: 0 0 12px 12px;
+                height: 510px;
+    
+                img {
+                    margin-bottom: -2px;
+                }
+            }
+            &-slide {
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+            &-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-pagination {
+                position: absolute;
+                bottom: 172px;
+                left: 40px;
+    
+                &-bar {
+                    background: rgba(255, 255, 255, 0.35);
+                    width: 20px;
+                    height: 2px;
+                    margin-bottom: 12px;
+                    transition: .3s;
+                    border-radius: 50px;
+                    &.active {
+                        width: 40px;
+                    }
+                }
+                &-fill {
+                    background: #fff;
+                    width: 0;
+                    height: 2px;
+                    border-radius: 50px;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1300px) {
+        //margin-top: 64px;
+        padding: 56px 0;
+        padding-bottom: 316px;
+        overflow: visible;
+        &__content {
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        &__title {
+            max-width: 653px;
+            font-size: 60px;
+            line-height: 76px;
+            text-align: left;
+            margin-bottom: 41px;
+    
+            & svg {
+                width: 64px;
+                height: 64px;
+                margin-bottom: -12px;
+                margin-right: 0;
+            }
+        }
+        &__subtitle {
+            max-width: 410px;
+            color: $dark-grey;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 64px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+        }
+        &__overlay {
+            width: 1522px;
+            top: -64px;
+            left: calc(50% - 42px);
+            transform: translate(-50%,0%);
+            &-img {
+                display: none;
+                &-lg {
+                    display: block;
+                }
+            }
+        }
+        &__slider {
+            
+            position: absolute;
+            top: 276px;
+            left: calc(50% - 95px);
+    
+            &-content {
+                position: relative;
+            }
+            &-header {
+                margin-bottom: -2px;
+            }
+            &-slides {
+                position: relative;
+                overflow: hidden;
+                border-radius: 0 0 12px 12px;
+                height: 510px;
+    
+                img {
+                    margin-bottom: -2px;
+                }
+            }
+            &-slide {
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+            &-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-pagination {
+                position: absolute;
+                bottom: 172px;
+                left: 40px;
+    
+                &-bar {
+                    background: rgba(255, 255, 255, 0.35);
+                    width: 20px;
+                    height: 2px;
+                    margin-bottom: 12px;
+                    transition: .3s;
+                    border-radius: 50px;
+                    &.active {
+                        width: 40px;
+                    }
+                }
+                &-fill {
+                    background: #fff;
+                    width: 0;
+                    height: 2px;
+                    border-radius: 50px;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}

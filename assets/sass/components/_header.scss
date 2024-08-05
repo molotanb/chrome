@@ -1,0 +1,201 @@
+.header {
+    background-color: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(32, 33, 37, 0.1);
+    z-index: 99;
+    //position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    &.sticky  {
+        position: fixed;
+        top: -100px;
+        width: 100%;
+        transition: top 0.3s ease;
+        &.show {
+            top: 0;
+        }
+    }
+
+    &__wrapper {
+        @include container;
+        @include flex-center;
+        width: 100%;
+        justify-content: start;
+        padding: 8px 0;
+    }
+
+    &__hamburger {
+        display: block;
+        margin-right: 16px;
+        &-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__lockup {
+        margin-right: 70px;
+    }
+
+    &__logo {
+        svg {
+            width: 118px;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        &-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-li {
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &-link {
+                text-decoration: none;
+                color: $dark-grey;
+                transition: color 0.3s;
+                font-family: Manrope;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                padding: 9px 13px;
+
+                &:hover {
+                    color: $primary-color;
+                }
+
+                &.selected-link {
+                    font-weight: bold;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        display: none;
+        margin-left: auto;
+
+        .btn {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            padding: 14px 24px;
+            @extend .btn;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        &__nav,
+        &__cta {
+            display: none;
+        }
+        &__hamburger {
+            margin-right: 24px;
+        }
+    }
+    @media screen and (min-width: 1300px) {
+        &__nav,
+        &__cta {
+            display: block;
+        }
+        &__hamburger{
+            display: none;
+        }
+        &__logo {
+            svg {
+                width: 144px;
+            }
+        }
+    }
+    
+
+    @include breakpoint(md) {
+       
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    
+    z-index: 99;
+    display: none;
+    &.active {
+        display: block;
+    }
+    &__header {
+        padding: 12px 28px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 2px 6px 0px rgba(32, 33, 37, 0.10);
+
+    }
+    &__menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 274px;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        &-close {
+            position: absolute;
+            top: 0;
+            right: -100px;
+        }
+    }
+    &__nav {
+        padding: 24px 16px;
+        li {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px
+        }
+    }
+    &__footer {
+        margin-top: auto;
+        padding: 16px;
+        box-shadow: 0px -2px 6px 0px rgba(32, 33, 37, 0.10);
+        .header__cta {
+            a {
+                width: 100%;
+                padding: 14px 24px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .header__cta,
+    .header__nav {
+        display: block;
+    }
+    .header__nav {
+        &-list {
+            flex-direction: column;
+        }
+    }
+    .header__logo svg {
+        width: 116px;
+    }
+}

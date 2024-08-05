@@ -5,6 +5,7 @@ node_modules/
 !*.html
 !*.css
 !gulpfile.js
+!assets/
 !src/
 
 # ignore Editor files

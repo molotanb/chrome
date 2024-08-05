@@ -1,0 +1,237 @@
+.installation {
+    margin-bottom: 52px;
+
+    &__row {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__col {
+        width: 100%;
+
+        &-slider {
+            position: relative;
+        }
+    }
+    &__wrapper {
+        margin: 0 auto;
+    }
+
+    &__slider {
+        position: relative;
+        height: 328px;
+        &-prev,
+        &-next {
+            position: absolute;
+            bottom: -15px;
+            //transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        &-prev {
+            right: calc(50% + 38px);
+        }
+
+        &-next {    
+            left: calc(50% + 38px);
+        }
+    }
+
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__tabs {
+        margin-top: 36px;
+    }
+    &__tab {
+        cursor: pointer;
+        display: -webkit-inline-box;
+        //align-items: stretch;
+        margin-bottom: 37px;
+        display: none;
+        .installation__bar-fill {
+            display: none;
+        }
+        &.active {
+            display: flex;
+            .installation__bar-fill {
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        padding: 8px 0;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+  
+    &__description {
+        display: none;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $dark-grey;
+    }
+
+    &__bar {
+        width: 4px;
+        margin-right: 18px;
+        overflow: hidden;
+        background: #F8F9FB;
+
+        &-fill {
+            width: 4px;
+            height: 0%;
+            background-color: $primary-color;
+            transition: height 0.3s;
+        }
+    }
+
+    
+    &__cta {
+        width: 100%;
+        @include btn-cta;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 52px;
+        &__wrapper {
+            @include flex-center;
+            flex-wrap: wrap;
+            width: 444px;
+        }
+        &__col {
+            &-slider {
+                @include flex-center;
+            }
+        }
+        &__slider {
+            width: 444px;
+            height: 444px;
+            &-prev,
+            &-next {
+                position: absolute;
+                top: calc(50% + -5px);
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+
+            &-prev {
+                right: calc(100% + 35px);
+            }
+
+            &-next {    
+                left: calc(100% + 23px);
+            }
+        }
+        &__tabs {
+            margin-top: 36px;
+        }
+        &__tab {
+            cursor: pointer;
+            display: -webkit-inline-box;
+            margin-bottom: 48px;
+            display: none;
+            &.active {
+                display: flex;
+            }
+        }
+        &__content {
+            padding: 4px 0;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+      
+        &__description {
+            display: none;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            color: $dark-grey;
+        }
+        &__bar {
+            margin-right: 25px;
+        }
+        &__cta {
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 1300px) {
+        margin-bottom: 255px;
+        &__wrapper {
+            width: 423px;
+            padding-left: 16px;
+        }
+        &__row {
+            flex-wrap: nowrap;
+        }
+        &__slider {
+            width: 100%;
+            height: 620px;
+            &-nav {
+                display: none;
+            }
+        }
+        &__slide {
+            width: 100%;
+        }
+        &__tabs {
+            margin-top: 0;
+            margin-bottom: 19px;
+        }
+        &__tab {
+            display: flex;
+            margin-bottom: 28px;
+        }
+        &__content {
+            padding-top: 12px;
+            padding-bottom: 16px;
+        }
+        &__title {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 32px;;
+            margin-bottom: 12px;
+        }
+      
+        &__description {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        &__bar {
+            width: 4px;
+            margin-right: 32px;
+            overflow: visible;
+    
+            &-fill {
+                width: 4px;
+                height: 0%;
+            }
+        }
+        &__cta {
+            width: 100%;
+        }
+    }
+}
